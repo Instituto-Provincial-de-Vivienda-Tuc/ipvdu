@@ -10,7 +10,7 @@ export const MainPage = () => {
 
 
             {/* Contenedor principal */}
-            <div className="max-w-screen-xl flex-wrap justify-between mx-auto mt-16 md:mt-24 lg:mt-20 mb-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl flex-wrap justify-between mx-auto mt-16 md:mt-24 lg:mt-26 mb-20 px-4 sm:px-6 lg:px-8">
                 {/* Sección de Noticias */}
                 <section className="mb-24">
 
@@ -18,6 +18,28 @@ export const MainPage = () => {
                         <CarouselPru />
                     </div>
                 </section>
+
+                {/* Indicador de scroll animado */}
+                <div className="flex justify-center mb-16">
+                    <div className="animate-bounce flex flex-col items-center">
+                        <p className="text-gray-600 mb-2 font-medium">Desliza para ver más</p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-8 w-8 text-[#FFB81A]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
                 {/* Sección de Trámites y Servicios - Rediseñada con iconos originales */}
                 <section className="mb-24">
                     <h2 className="font-playfair font-extrabold text-3xl md:text-4xl lg:text-5xl mb-10 md:mb-16 lg:mb-20 text-center text-gray-900 relative">
