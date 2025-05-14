@@ -10,13 +10,10 @@ export const MainPage = () => {
 
 
             {/* Contenedor principal */}
-            <div className="max-w-screen-xl flex-wrap justify-between mx-auto mt-16 md:mt-24 lg:mt-32 mb-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl flex-wrap justify-between mx-auto mt-16 md:mt-24 lg:mt-20 mb-20 px-4 sm:px-6 lg:px-8">
                 {/* Sección de Noticias */}
                 <section className="mb-24">
-                    <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-10 text-gray-900 relative inline-block">
-                        Noticias
-                        <span className="absolute bottom-[-10px] left-0 w-1/2 h-1 bg-[#FFB81A] rounded-full"></span>
-                    </h2>
+
                     <div className="flex justify-center transform transition-all duration-500 hover:translate-y-[-8px]">
                         <CarouselPru />
                     </div>
