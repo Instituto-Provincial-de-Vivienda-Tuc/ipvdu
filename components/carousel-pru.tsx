@@ -14,6 +14,7 @@ import { useGetFeatured } from "@/api/useGetFeatured"
 import { ResponseType } from "@/types/response"
 import { SkeletonSchema } from "./skeletonSchema"
 import { NoticiaType } from "@/types/noticia"
+import { FormatDate } from "./FormatDate"
 
 export function CarouselPru() {
     const { loading, result }: ResponseType = useGetFeatured();
@@ -55,7 +56,9 @@ export function CarouselPru() {
                                             <div className="md:w-2/5 p-6 md:p-8 flex flex-col justify-between">
                                                 <div>
                                                     <div className="flex items-center justify-between mb-4">
-                                                        <span className="text-sm font-medium text-gray-500">{fecha}</span>
+                                                        <span className="text-sm font-medium text-gray-500">
+                                                            <FormatDate dateString={fecha} />
+                                                        </span>
                                                         <div className="flex space-x-2">
                                                             <Image
                                                                 className="w-5 h-5"

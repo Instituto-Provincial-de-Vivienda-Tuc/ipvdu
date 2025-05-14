@@ -3,6 +3,7 @@ import { SkeletonBigSchema } from "@/components/skeletonBigSchema"
 import { NoticiaType } from "@/types/noticia"
 import { ResponseType } from "@/types/response"
 import Image from 'next/image'
+import { FormatDate } from "@/components/FormatDate"
 
 export const ListaNoticias = () => {
     const { result, loading }: ResponseType = useGetProductField()
@@ -30,7 +31,9 @@ export const ListaNoticias = () => {
                                 <p className="text-gray-700 mb-4">
                                     {result !== null && !loading && (subtitulo)}
                                 </p>
-                                <p className="text-sm text-gray-500"> {result !== null && !loading && (fecha)}</p>
+                                <p className="text-sm text-gray-500"> 
+                                    {result !== null && !loading && <FormatDate dateString={fecha} />}
+                                </p>
                                 <div className="flex md:block place-content-around">
                                     <a href={`/noticias/${slug}`} className="inline-flex font-black items-center px-3 py-2 mt-8 bg-[#FFB81A]  hover:bg-[#ff891a]">
                                         Visitar Noticia

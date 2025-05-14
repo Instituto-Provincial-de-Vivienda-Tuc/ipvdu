@@ -12,6 +12,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from 'next/image';
 import { CategoryBoard } from "../components/category-component";
+import { FormatDate } from "@/components/FormatDate";
 
 export default function Page() {
     const params = useParams();
@@ -89,7 +90,7 @@ export default function Page() {
                                                         Noticia principal
                                                     </span>
                                                     <time className="ml-3 text-sm font-light text-gray-500">
-                                                        {fecha}
+                                                        <FormatDate dateString={fecha} />
                                                     </time>
                                                 </div>
 
