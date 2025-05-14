@@ -104,15 +104,11 @@ export function CarouselPru() {
                     )}
                 </CarouselContent>
 
-                {/* Flechas de navegación a los costados */}
+                {/* Flechas de navegación a los costados - solo visibles en desktop */}
                 <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#FFB81A]/80 hover:bg-[#FFB81A] border-none text-gray-900 hidden md:flex" />
                 <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#FFB81A]/80 hover:bg-[#FFB81A] border-none text-gray-900 hidden md:flex" />
 
-                {/* Flechas de navegación centradas para móvil */}
-                <div className="flex justify-center mt-4 gap-2 md:hidden">
-                    <CarouselPrevious className="relative left-0 translate-x-0 bg-[#FFB81A] hover:bg-[#ffce63] border-none text-gray-900" />
-                    <CarouselNext className="relative right-0 translate-x-0 bg-[#FFB81A] hover:bg-[#ffce63] border-none text-gray-900" />
-                </div>
+                {/* Eliminamos las flechas de navegación para móvil */}
             </Carousel>
         </div>
     )

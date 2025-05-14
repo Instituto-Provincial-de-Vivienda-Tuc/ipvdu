@@ -3,8 +3,10 @@ import React from 'react'
 import { CarouselPru } from './carousel-pru'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ScrollIndicator } from './scroll-indicator'
 
 export const MainPage = () => {
+
     return (
         <main className="min-h-screen bg-gray-50 font-lora">
 
@@ -21,27 +23,11 @@ export const MainPage = () => {
 
                 {/* Indicador de scroll animado */}
                 <div className="flex justify-center mb-16">
-                    <div className="animate-bounce flex flex-col items-center">
-                        <p className="text-gray-600 mb-2 font-medium">Desliza para ver más</p>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-8 w-8 text-[#FFB81A]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                            />
-                        </svg>
-                    </div>
+                    <ScrollIndicator targetId="tramites-servicios" />
                 </div>
 
                 {/* Sección de Trámites y Servicios - Rediseñada con iconos originales */}
-                <section className="mb-24">
+                <section id="tramites-servicios" className="mb-24">
                     <h2 className="font-playfair font-extrabold text-3xl md:text-4xl lg:text-5xl mb-10 md:mb-16 lg:mb-20 text-center text-gray-900 relative">
                         Trámites y Servicios
                         <span className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#FFB81A] rounded-full"></span>
