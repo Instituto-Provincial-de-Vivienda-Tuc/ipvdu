@@ -1,8 +1,15 @@
 
 "use client"
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Page() {
+    const [showDropdown, setShowDropdown] = useState(false);
+    
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+    
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Banner principal */}
@@ -85,10 +92,77 @@ export default function Page() {
                                     </svg>
                                 </div>
                                 <span className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                                    Nota dirigida a la Sra. Interventora del Instituto de la Vivienda – Arq. NORA BELLONI, solicitando autorización de TRANSFERENCIA Y CANCELACIÓN O CAMBIO DE TITULAR. Para cancelación presentar fotocopia de BOLETA DE PAGO ESPECIAL.
+                                    Nota dirigida al Sr. Interventor del Instituto de la Vivienda – Arq. Víctor Hugo Cabral, solicitando autorización de TRANSFERENCIA Y CANCELACIÓN O CAMBIO DE TITULAR. Para cancelación presentar fotocopia de BOLETA DE PAGO ESPECIAL.
                                 </span>
                             </li>
-
+                            <div className="flex justify-center mt-8 relative">
+                                <button
+                                    onClick={toggleDropdown}
+                                    className="inline-flex items-center px-8 py-3 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63]"
+                                >
+                                    <svg 
+                                        className="w-5 h-5 mr-2" 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        fill="none" 
+                                        viewBox="0 0 24 24" 
+                                        stroke="currentColor"
+                                    >
+                                        <path 
+                                            strokeLinecap="round" 
+                                            strokeLinejoin="round" 
+                                            strokeWidth="2" 
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                                        />
+                                    </svg>
+                                    Descargar modelo de nota
+                                    <svg 
+                                        className="w-4 h-4 ml-2" 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        fill="none" 
+                                        viewBox="0 0 24 24" 
+                                        stroke="currentColor"
+                                    >
+                                        <path 
+                                            strokeLinecap="round" 
+                                            strokeLinejoin="round" 
+                                            strokeWidth="2" 
+                                            d={showDropdown ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} 
+                                        />
+                                    </svg>
+                                </button>
+                                
+                                {showDropdown && (
+                                    <div className="absolute top-full mt-2 w-64 bg-white rounded-lg shadow-lg z-10 overflow-hidden">
+                                        <a 
+                                            href="/modelos/modelo-transferencia.docx" 
+                                            className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 flex items-center"
+                                        >
+                                            <svg className="w-4 h-4 mr-2 text-[#FFB81A]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            Modelo de Transferencia
+                                        </a>
+                                        <a 
+                                            href="/modelos/modelo-cancelacion.docx" 
+                                            className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 flex items-center"
+                                        >
+                                            <svg className="w-4 h-4 mr-2 text-[#FFB81A]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            Modelo de Cancelación
+                                        </a>
+                                        <a 
+                                            href="/modelos/modelo-cambio-titular.docx" 
+                                            className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 flex items-center"
+                                        >
+                                            <svg className="w-4 h-4 mr-2 text-[#FFB81A]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            Modelo de Cambio de Titular
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
                             <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                                 <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300 mt-1">
                                     <svg className="w-4 h-4 text-[#FFB81A]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,7 +194,7 @@ export default function Page() {
                                     </svg>
                                 </div>
                                 <span className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                                    Arancel por Transferencia de Vivienda ($6.450) – por Transferencia de Lotes ($3.150) CUENTA N° 360000200980735 (IPV y DU) – BANCO MACRO. ORIGINAL.
+                                    Arancel por Transferencia de Vivienda ($30.000) – por Transferencia de Lotes ($12.000) CUENTA N° 360000200980735 (IPV y DU) – BANCO MACRO. ORIGINAL.
                                 </span>
                             </li>
 
@@ -192,7 +266,7 @@ export default function Page() {
                                     </svg>
                                 </div>
                                 <span className="text-lg text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                                    Libre deuda de Expensas.
+                                    Libre deuda emitido por dpto. Recursos Financieros.
                                 </span>
                             </li>
 
