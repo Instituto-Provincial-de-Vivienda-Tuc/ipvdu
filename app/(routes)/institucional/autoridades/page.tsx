@@ -39,7 +39,7 @@ export default function Page() {
                                 <div className="overflow-hidden rounded-xl shadow-md">
                                     <Image
                                         className="h-64 w-auto object-cover transition-transform duration-500 hover:scale-110"
-                                        src="https://i0.wp.com/elsigloweb.com/wp-content/uploads/2022/12/FiQAyURXgAEgL1k.jpg?fit=400%2C400&ssl=1"
+                                        src="https://www.reyplast.pe/blog/wp-content/uploads/2016/06/white-background-2.jpg"
                                         alt="Interventor IPV"
                                         width={300}
                                         height={256}
@@ -56,18 +56,18 @@ export default function Page() {
                                 <div className="flex items-center mb-6">
                                     <div className="w-2 h-16 bg-[#FFB81A] mr-4 rounded-full"></div>
                                     <div>
-                                        <h3 className="text-4xl font-medium mb-1 text-gray-900">Emilse Giandominco</h3>
-                                        <h3 className="text-3xl font-bold mb-1 text-[#FFB81A]">Sub Interventora</h3>
+                                        <h3 className="text-4xl font-medium mb-1 text-gray-900">Eloy Del Pino</h3>
+                                        <h3 className="text-3xl font-bold mb-1 text-[#FFB81A]">Sub Interventor</h3>
                                     </div>
                                 </div>
                                 <div className="ml-6 space-y-4">
                                     <div>
                                         <p className="font-medium text-xl text-[#FFB81A]">Profesión</p>
-                                        <p className="font-medium text-lg text-gray-700">Abogada - Universidad Nacional de Tucumán</p>
+                                        <p className="font-medium text-lg text-gray-700">Abogado - Universidad Nacional de Tucumán</p>
                                     </div>
                                     <div>
                                         <p className="font-medium text-xl text-[#FFB81A]">Cargo</p>
-                                        <p className="font-medium text-lg text-gray-700">Sub Interventora del Instituto Provincial de Vivienda y Desarrollo Urbano de la Provincia de Tucumán</p>
+                                        <p className="font-medium text-lg text-gray-700">Sub Interventor del Instituto Provincial de Vivienda y Desarrollo Urbano de la Provincia de Tucumán</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ export default function Page() {
                                 <div className="overflow-hidden rounded-xl shadow-md">
                                     <Image
                                         className="h-64 w-auto object-cover transition-transform duration-500 hover:scale-110"
-                                        src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/wufty3bp4eipn1ql7v5m.jpg"
+                                        src="https://www.reyplast.pe/blog/wp-content/uploads/2016/06/white-background-2.jpg"
                                         alt="Sub Interventora IPV"
                                         width={300}
                                         height={256}

@@ -38,23 +38,22 @@ export default function Page() {
                         </p>
                     </div>
                     <div className="md:ml-10 lg:ml-16 font-bold px-5 md:px-8 mb-14 md:mb-0 bg-gradient-to-br from-[#FFB81A]/10 to-[#FFB81A]/30 rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
-                        <div className="transform transition-transform duration-300 hover:scale-105">
-                            <p className="text-2xl md:text-3xl mb-2 text-gray-800">Total de viviendas</p>
-                            <p className="text-5xl md:text-7xl mb-8 text-gray-900">650</p>
-                        </div>
-                        <div className="transform transition-transform duration-300 hover:scale-105">
-                            <p className="text-2xl md:text-3xl mb-2 text-gray-800">Entregadas</p>
-                            <p className="text-5xl md:text-7xl mb-8 text-gray-900">34,160</p>
-                        </div>
-                        <div className="transform transition-transform duration-300 hover:scale-105">
-                            <p className="text-2xl md:text-3xl mb-2 text-gray-800">Total de viviendas</p>
-                            <p className="text-5xl md:text-7xl mb-8 text-gray-900">2001</p>
-                        </div>
-                        <div className="transform transition-transform duration-300 hover:scale-105">
-                            <p className="text-2xl md:text-3xl mb-2 text-gray-800">Entregadas</p>
-                            <p className="text-5xl md:text-7xl text-gray-900">40</p>
+                        <div className="flex flex-col space-y-4 sm:mt-40">
+                            <div className="transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-2xl md:text-3xl mb-2 text-gray-800 border-l-4 border-[#FFB81A] pl-3">Tu</p>
+                            </div>
+                            <div className="transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-2xl md:text-3xl mb-2 text-gray-800 border-l-4 border-[#FFB81A] pl-3">Hogar</p>
+                            </div>
+                            <div className="transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-2xl md:text-3xl mb-2 text-gray-800 border-l-4 border-[#FFB81A] pl-3">Nuestro</p>
+                            </div>
+                            <div className="transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-2xl md:text-3xl mb-2 text-gray-800 border-l-4 border-[#FFB81A] pl-3 font-extrabold">Compromiso</p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <CarouselInst />

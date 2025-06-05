@@ -5,11 +5,11 @@ import { useState } from "react";
 
 export default function Page() {
     const [showDropdown, setShowDropdown] = useState(false);
-    
+
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
     };
-    
+
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Banner principal */}
@@ -100,65 +100,47 @@ export default function Page() {
                                     onClick={toggleDropdown}
                                     className="inline-flex items-center px-8 py-3 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63]"
                                 >
-                                    <svg 
-                                        className="w-5 h-5 mr-2" 
-                                        xmlns="http://www.w3.org/2000/svg" 
-                                        fill="none" 
-                                        viewBox="0 0 24 24" 
+                                    <svg
+                                        className="w-5 h-5 mr-2"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
                                         stroke="currentColor"
                                     >
-                                        <path 
-                                            strokeLinecap="round" 
-                                            strokeLinejoin="round" 
-                                            strokeWidth="2" 
-                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                         />
                                     </svg>
                                     Descargar modelo de nota
-                                    <svg 
-                                        className="w-4 h-4 ml-2" 
-                                        xmlns="http://www.w3.org/2000/svg" 
-                                        fill="none" 
-                                        viewBox="0 0 24 24" 
+                                    <svg
+                                        className="w-4 h-4 ml-2"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
                                         stroke="currentColor"
                                     >
-                                        <path 
-                                            strokeLinecap="round" 
-                                            strokeLinejoin="round" 
-                                            strokeWidth="2" 
-                                            d={showDropdown ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"} 
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d={showDropdown ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}
                                         />
                                     </svg>
                                 </button>
-                                
+
                                 {showDropdown && (
                                     <div className="absolute top-full mt-2 w-64 bg-white rounded-lg shadow-lg z-10 overflow-hidden">
-                                        <a 
-                                            href="/modelos/modelo-transferencia.docx" 
+                                        <a
+                                            href="/"
                                             className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 flex items-center"
                                         >
                                             <svg className="w-4 h-4 mr-2 text-[#FFB81A]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                             </svg>
-                                            Modelo de Transferencia
-                                        </a>
-                                        <a 
-                                            href="/modelos/modelo-cancelacion.docx" 
-                                            className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 flex items-center"
-                                        >
-                                            <svg className="w-4 h-4 mr-2 text-[#FFB81A]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                            </svg>
-                                            Modelo de Cancelación
-                                        </a>
-                                        <a 
-                                            href="/modelos/modelo-cambio-titular.docx" 
-                                            className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors duration-200 flex items-center"
-                                        >
-                                            <svg className="w-4 h-4 mr-2 text-[#FFB81A]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                            </svg>
-                                            Modelo de Cambio de Titular
+                                            Proximamente: modelos de nota en pdf.
                                         </a>
                                     </div>
                                 )}
