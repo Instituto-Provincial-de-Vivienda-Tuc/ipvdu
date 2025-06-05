@@ -1,0 +1,17 @@
+{
+  "name": "Instituto Provincial de Vivienda y Desarrollo Urbano - Tucumán",
+  "short_name": "IPVDU Tucumán",
+  "description": "Sitio oficial del Instituto Provincial de Vivienda y Desarrollo Urbano de Tucumán",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
