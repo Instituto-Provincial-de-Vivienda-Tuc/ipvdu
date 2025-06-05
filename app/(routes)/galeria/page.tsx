@@ -19,14 +19,14 @@ const uniqueImages = [
 
 // Textos para las polaroids
 const polaroidTexts = [
-    "Taller de carpintería profesional",
-    "Artesano trabajando con madera",
-    "Técnicas avanzadas de carpintería",
-    "Detalle en cada pieza",
-    "Precisión y experiencia",
+    "Viviendas de calidad",
+    "Familias y su primer hogar",
+    "Detalle en cada casa",
+    "Construyendo sueños",
+    "Precisión y compromiso",
     "Trabajo en equipo",
-    "Pasión por la madera",
-    "Creando muebles únicos",
+    "Actividad en nuestros barrios",
+    "Proyectos que quedan",
 ];
 
 export default function Page() {
