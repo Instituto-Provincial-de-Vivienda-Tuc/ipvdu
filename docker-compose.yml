@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"  # Cambiado de 3000:3000 a 8080:8080
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=https://pagina.ipvtuc.gob.ar
+      - NEXT_PUBLIC_STRAPI_API_TOKEN=${NEXT_PUBLIC_STRAPI_API_TOKEN}
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/ipvdu_db
+      - PORT=8080  # Añadido para configurar el puerto de Next.js
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ipvdu_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
