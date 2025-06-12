@@ -41,7 +41,7 @@ export const Navbar = () => {
                         />
                     </a>
                     <a href="https://www.tucuman.gob.ar/">
-                        <Image className="hidden w-21 h-16 md:block" src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/z7rkzxdbrsioh3zcct29.jpg" alt="Gobierno de Tucumán Logo" width={190} height={64} />
+                        <Image className="hidden w-21 h-16 md:block" src="/logo-tucuman-nuevo.svg" alt="Gobierno de Tucumán Logo" width={190} height={64} />
                     </a>
                 </div>
                 <div className="items-center justify-between hidden lg:flex">
