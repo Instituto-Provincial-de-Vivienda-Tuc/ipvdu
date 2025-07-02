@@ -41,8 +41,8 @@ export function CarouselPru() {
                             const { id, titulo, subtitulo, fecha, slug, imagenPrincipal, category } = noticia
                             return (
                                 <CarouselItem key={id} className="md:basis-full">
-                                    <div className="rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl transform hover:scale-[1.01]">
-                                        <div className="flex flex-col md:flex-row bg-white">
+                                    <div className="rounded-xl overflow-hidden  transition-all duration-300 transform hover:scale-[1.01]">
+                                        <div className="flex flex-col  md:flex-row md:h-[505px]  bg-white">
                                             <div className="md:w-3/5 overflow-hidden flex items-center justify-center">
                                                 <Image
                                                     className="w-full h-auto max-h-[500px] object-contain transition-transform duration-700 hover:scale-110"
