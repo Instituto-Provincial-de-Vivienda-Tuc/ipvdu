@@ -9,7 +9,6 @@ const urbanist = Urbanist({
 });
 
 // Configuración de la URL base para metadatos absolutos
-export const metadataBase = new URL('https://ipvdu-beta.vercel.app');
 
 // Configuración del viewport
 export const viewport: Viewport = {
@@ -24,6 +23,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ipvdu-beta.vercel.app'),
   title: "Instituto Provincial de Vivienda y Desarrollo Urbano - Tucumán",
   description: "Sitio oficial del Instituto Provincial de Vivienda y Desarrollo Urbano de Tucumán. Información sobre trámites, obras, noticias y servicios para la comunidad.",
   keywords: [
