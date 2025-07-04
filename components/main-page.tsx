@@ -273,7 +273,7 @@ export const MainPage = () => {
                                     </div>
                                 </div>
 
-                                {/* Tarjeta Pagos */}
+                                {/* Tarjeta Pagos
                                 <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
                                     <div className="p-4 flex items-center">
                                         <div className="mr-4 group-hover:scale-110 transition-all duration-300">
@@ -294,7 +294,7 @@ export const MainPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                        {/* <div className="flex-1">
+                                        <div className="flex-1">
                                             <h3 className="text-lg font-bold text-gray-900 mb-1">Click de Pagos</h3>
                                             <div className="flex justify-between items-center">
                                                 <Link
@@ -307,9 +307,9 @@ export const MainPage = () => {
                                                     </svg>
                                                 </Link>
                                             </div>
-                                        </div> */}
+                                        </div> 
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* Enlaces adicionales */}
