@@ -294,7 +294,7 @@ export const MainPage = () => {
                                                 />
                                             </div>
                                         </div>
-                                        <div className="flex-1">
+                                        {/* <div className="flex-1">
                                             <h3 className="text-lg font-bold text-gray-900 mb-1">Click de Pagos</h3>
                                             <div className="flex justify-between items-center">
                                                 <Link
@@ -307,7 +307,7 @@ export const MainPage = () => {
                                                     </svg>
                                                 </Link>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
