@@ -17,10 +17,10 @@ export const ListaNoticias = () => {
                 return (
                     <div className="overflow-hidden mb-5" key={slug}>
                         <div className="md:flex md:flex-row-reverse">
-                            <div className="max-w-xs md:h-56 h-auto ml-9 mb-5 md:mb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <Image 
-                                    className="rounded-t-lg" 
-                                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${result !== null && !loading && (imagenPrincipal.url)}`} 
+                            <div className="max-w-xs md:h-28 h-auto ml-9 mb-5 md:mb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <Image
+                                    className="rounded-t-lg"
+                                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${result !== null && !loading && (imagenPrincipal.url)}`}
                                     alt={`Imagen de noticia: ${titulo}`}
                                     width={400}
                                     height={224}
@@ -31,7 +31,7 @@ export const ListaNoticias = () => {
                                 <p className="text-gray-700 mb-4">
                                     {result !== null && !loading && (subtitulo)}
                                 </p>
-                                <p className="text-sm text-gray-500"> 
+                                <p className="text-sm text-gray-500">
                                     {result !== null && !loading && <FormatDate dateString={fecha} />}
                                 </p>
                                 <div className="flex md:block place-content-around">

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Search } from "lucide-react"; // Importamos el ícono de lupa
 
@@ -210,37 +209,6 @@ export default function ObrasPage() {
                     </div>
                 </div>
             )}
-
-            {/* Imagen principal con animación y efecto hover */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative w-full h-[300px] md:h-[400px] mb-12 rounded-lg overflow-hidden shadow-xl group cursor-pointer"
-                onClick={() => handleImageClick("http://www.ipvtuc.gov.ar/wordpress/wp-content/uploads/2015/10/LISTA-PROGRAMAS.jpg")}
-            >
-                <Image
-                    src="http://www.ipvtuc.gov.ar/wordpress/wp-content/uploads/2015/10/LISTA-PROGRAMAS.jpg"
-                    alt="Obras del Instituto"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    priority
-                />
-                {/* Overlay con lupa en hover */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm">
-                        <Search className="w-8 h-8 text-white" />
-                    </div>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <div className="p-6 text-white">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-2">Construyendo el Futuro</h2>
-                        <p className="text-sm md:text-base max-w-2xl">
-                            Conoce las obras y proyectos que estamos desarrollando para mejorar la infraestructura y servicios de nuestro instituto.
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
 
             {/* Acordeón de obras */}
             <div className="bg-white rounded-lg shadow-md p-6">
