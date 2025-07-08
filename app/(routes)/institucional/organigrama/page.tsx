@@ -3,6 +3,13 @@ import Layout from "../components/layout";
 import { CarouselInst } from "../mision/components/carouselInst";
 import React, { useState } from 'react';
 import AreaSocialOrganigramaTailwind from "./components/AreaSocialOrganigramaTailwind";
+import AreaEconomicoFinancieraOrganigramaTailwind from "./components/AreaEconomicoFinancieraOrganigramaTailwind";
+import AreaLegalOrganigramaTailwind from "./components/AreaLegalOrganigramaTailwind";
+import AreaRecuperoRegularizacionDominialOrganigramaTailwind from "./components/AreaRecuperoRegularizacionDominialOrganigramaTailwind";
+import AreaPlaneamientoOrganigramaTailwind from "./components/AreaPlaneamientoOrganigramaTailwind";
+import AreaTecnicaOrganigramaTailwind from "./components/AreaTecnicaOrganigramaTailwind";
+import SecretariaGeneralOrganigramaTailwind from "./components/SecretariaGeneralOrganigramaTailwind";
+import { Info } from "lucide-react";
 
 // Definición de tipos para el organigrama
 type Seccion = {
@@ -89,7 +96,7 @@ const FlipCard = ({ frontContent, backContent = "Información no disponible", co
   const [isDesktop, setIsDesktop] = useState(false);
 
   // Verificar si esta tarjeta tiene un organigrama detallado disponible
-  const hasDetailedOrganigram = frontContent === "ÁREA SOCIAL";
+  const hasDetailedOrganigram = frontContent === "ÁREA SOCIAL" || frontContent === "ÁREA ECONÓMICO FINANCIERA" || frontContent === "ÁREA LEGAL" || frontContent === "ÁREA RECUPERO Y REGULARIZACIÓN DOMINIAL" || frontContent === "ÁREA PLANEAMIENTO" || frontContent === "ÁREA TÉCNICA" || frontContent === "SECRETARÍA GENERAL";
 
   // Efecto para manejar la detección del cliente y tamaño de pantalla
   React.useEffect(() => {
@@ -158,9 +165,13 @@ const FlipCard = ({ frontContent, backContent = "Información no disponible", co
           onClose={() => setIsModalOpen(false)}
           title={`Organigrama detallado: ${frontContent}`}
         >
-
-          <AreaSocialOrganigramaTailwind />
-
+          {frontContent === "ÁREA SOCIAL" && <AreaSocialOrganigramaTailwind />}
+          {frontContent === "ÁREA ECONÓMICO FINANCIERA" && <AreaEconomicoFinancieraOrganigramaTailwind />}
+          {frontContent === "ÁREA LEGAL" && <AreaLegalOrganigramaTailwind />}
+          {frontContent === "ÁREA RECUPERO Y REGULARIZACIÓN DOMINIAL" && <AreaRecuperoRegularizacionDominialOrganigramaTailwind />}
+          {frontContent === "ÁREA PLANEAMIENTO" && <AreaPlaneamientoOrganigramaTailwind />}
+          {frontContent === "ÁREA TÉCNICA" && <AreaTecnicaOrganigramaTailwind />}
+          {frontContent === "SECRETARÍA GENERAL" && <SecretariaGeneralOrganigramaTailwind />}
         </Modal>
       )}
     </>
@@ -190,19 +201,21 @@ export default function Page() {
       },
       {
         nombre: "ÁREA ECONÓMICO FINANCIERA",
-
+        titular: "C.P.N. Julieta Juarez",
       },
 
       {
         nombre: "ÁREA LEGAL",
-
+        titular: "Dr. Guillermo Curia",
       },
       {
         nombre: "ÁREA RECUPERO Y REGULARIZACIÓN DOMINIAL",
+        titular: "Abog. Lic. Trab. Social Graciela Ortiz",
 
       },
       {
         nombre: "ÁREA PLANEAMIENTO",
+        titular: "Arq. Augusto Paz",
 
       },
       {
@@ -217,6 +230,29 @@ export default function Page() {
       {
         nombre: "CÓMPUTOS",
         titular: "Sr. Federico Conrad",
+      },
+      {
+        nombre: "C.O.A.",
+        titular: "Sra. Maria Elena Aparicio",
+      },
+      {
+        nombre: "Dpto. Prensa y Difusion",
+        titular: "Lic. Marina Albornoz",
+      },
+      {
+        nombre: "Dpto. Relaciones Institucionales",
+        titular: "Vacante",
+      },
+      {
+        nombre: "U.G.R.L.",
+        titular: "Sr. Miguel Amenta",
+      },
+      {
+        nombre: "Dpto. Control de Gestion",
+        titular: "Sr. Juan De Cristobal",
+      },
+      {
+        nombre: "Secretaria Privada Intervención y Sub-Intervención",
       },
 
     ]
@@ -235,7 +271,7 @@ export default function Page() {
           <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-500 hover:shadow-xl transform hover:translate-y-[-5px]">
             <div className="organigrama-container relative">
               {/* Mapa de colores */}
-              <div className="color-map-container absolute top-4 left-4 bg-white p-3 rounded-lg shadow-md z-10">
+              <div className="color-map-container absolute top-4 right-4 bg-white p-3 rounded-lg shadow-md z-10">
                 <h4 className="text-sm font-bold mb-2">Referencias:</h4>
                 <ul className="space-y-2">
                   {colorMap.map((item, index) => (
@@ -247,6 +283,22 @@ export default function Page() {
                       <span>{item.nivel}</span>
                     </li>
                   ))}
+                </ul>
+              </div>
+              <div className="absolute top-4 left-4 bg-white bg-opacity-90 backdrop-blur-sm p-4 md:p-6 max-w-xs md:max-w-sm rounded-2xl shadow-lg border border-gray-200 z-10">
+                <div className="flex items-center mb-3">
+                  <Info className="w-5 h-5 text-blue-500 mr-2" />
+                  <h4 className="text-sm md:text-base font-semibold text-gray-800">Cómo Funciona</h4>
+                </div>
+                <ul className="space-y-2 text-xs md:text-sm text-gray-700 leading-snug">
+                  <li className="flex items-start">
+                    <span className="mr-1">•</span>
+                    <span>Haga clic en las tarjetas para ver los titulares en dispositivos móviles.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-1">•</span>
+                    <span>Pase el cursor sobre las tarjetas para ver los titulares en escritorio.</span>
+                  </li>
                 </ul>
               </div>
 
@@ -473,8 +525,7 @@ export default function Page() {
             </div>
 
             <div className="text-center mt-8">
-              <p className="text-sm text-gray-500 mb-2">Haga clic en las tarjetas para ver los titulares (en dispositivos móviles) o pase el cursor sobre ellas (en escritorio)</p>
-              <p className="text-sm text-blue-600 mb-4">Haga clic en el <strong>ÁREA SOCIAL</strong> para ver su organigrama detallado</p>
+
               <p className="text-xs text-gray-400">Actualizado el 06/06/2022 (Expte. 576/440-2003)</p>
             </div>
           </div>
