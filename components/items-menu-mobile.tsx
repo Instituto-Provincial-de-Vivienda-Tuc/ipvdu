@@ -50,7 +50,6 @@ export const ItemsMenuMobile = () => {
                     </AccordionItem>
                 </Accordion>
                 <hr />
-                <Link href="/contacto" className='block'>Contacto</Link>
             </PopoverContent>
         </Popover>
     )
