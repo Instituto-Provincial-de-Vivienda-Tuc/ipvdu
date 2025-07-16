@@ -23,7 +23,7 @@ export function CarouselPru() {
     );
 
     return (
-        <div className="relative w-full max-w-6xl">
+        <div className="relative w-full">
             <Carousel
                 plugins={[plugin.current]}
                 className="w-full"
