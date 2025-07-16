@@ -266,27 +266,29 @@ const AreaEconomicoFinancieraOrganigramaTailwind: React.FC = () => {
         ))}
       </div>
 
-      {/* Secciones agrupadas por departamento - Layout responsivo */}
+      {/* Secciones agrupadas por departamento - Layout en dos columnas verticales */}
       <div className="sections-container">
-        {/* Secciones para Departamento 1 */}
-        <div className="dept1-sections mb-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {sectionsByDepartment.dept1.map((item) => (
-              <div key={item.id} className="h-20">
-                <OrganigramaBox item={item} />
-              </div>
-            ))}
+        <div className="flex flex-col md:flex-row gap-8 justify-center">
+          {/* Columna izquierda - Secciones del Departamento 1 */}
+          <div className="dept1-sections flex-1 max-w-md">
+            <div className="flex flex-col gap-4">
+              {sectionsByDepartment.dept1.map((item) => (
+                <div key={item.id} className="h-20">
+                  <OrganigramaBox item={item} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Secciones para Departamento 2 */}
-        <div className="dept2-sections">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {sectionsByDepartment.dept2.map((item) => (
-              <div key={item.id} className="h-20">
-                <OrganigramaBox item={item} />
-              </div>
-            ))}
+          {/* Columna derecha - Secciones del Departamento 2 */}
+          <div className="dept2-sections flex-1 max-w-md">
+            <div className="flex flex-col gap-4">
+              {sectionsByDepartment.dept2.map((item) => (
+                <div key={item.id} className="h-20">
+                  <OrganigramaBox item={item} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
