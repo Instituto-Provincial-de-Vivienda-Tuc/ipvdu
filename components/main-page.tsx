@@ -198,15 +198,6 @@ Estas porciones del parque fueron pensadas como paseo y a su vez la Norte conten
         fecha: "2024",
         detalles: []
     },
-    {
-        id: "obra8",
-        titulo: "Síntesis general de Obras en Ejecución",
-        descripcion: "Gestión 2003/2018. ",
-        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
-        estado: "En progreso",
-        fecha: "2024",
-        detalles: []
-    },
 ];
 
 
