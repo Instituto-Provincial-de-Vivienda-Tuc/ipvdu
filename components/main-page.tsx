@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import { CarouselPru } from './carousel-pru'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ScrollIndicator } from './scroll-indicator'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Search } from "lucide-react"; // Importamos el ícono de lupa
 const obrasData = [
@@ -153,9 +152,48 @@ Estas porciones del parque fueron pensadas como paseo y a su vez la Norte conten
     },
     {
         id: "obra2",
-        titulo: "Síntesis general de Obras en Ejecución",
-        descripcion: "Gestión 2003/2018. ",
-        imagen: "http://www.ipvtuc.gov.ar/wordpress/wp-content/uploads/2015/10/RESUMEN-OBRAS-EN-EJECUCI%C3%93N.jpg",
+        titulo: "100 Viv. Las Talitas",
+        imagen: "https://minobrastuc.gob.ar/wp-content/uploads/2025/05/4920681595543858485.jpg",
+        estado: "Completado",
+        fecha: "2024",
+        detalles: []
+    },
+    {
+        id: "obra3",
+        titulo: "25 Viv. Manantial Sur",
+        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
+        estado: "Completado",
+        fecha: "2024",
+        detalles: []
+    },
+    {
+        id: "obra4",
+        titulo: "20 Viv. Manantial Sur",
+        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
+        estado: "En progreso",
+        fecha: "2024",
+        detalles: []
+    },
+    {
+        id: "obra5",
+        titulo: "28 Viv. Manantial Sur",
+        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
+        estado: "En progreso",
+        fecha: "2024",
+        detalles: []
+    },
+    {
+        id: "obra6",
+        titulo: "46 Viv. Manantial Sur",
+        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
+        estado: "En progreso",
+        fecha: "2024",
+        detalles: []
+    },
+    {
+        id: "obra7",
+        titulo: "80 Viv. Manantial Sur",
+        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
         estado: "En progreso",
         fecha: "2024",
         detalles: []
@@ -178,170 +216,180 @@ export const MainPage = () => {
 
             {/* Contenedor principal */}
 
-            <div className="max-w-screen-xl flex-wrap justify-between mx-auto mt-16 md:mt-24 lg:mt-26 mb-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl flex-wrap justify-between mx-auto mt-16 md:mt-10 lg:mt-26 mb-20 px-4 sm:px-6 lg:px-8">
                 {/* Sección de Noticias */}
-                <section className="mb-24">
+                <section className="mb-10">
 
-                    <div className="flex flex-col lg:flex-row justify-between items-start gap-6 transform transition-all duration-500 ">
+                    <div className="flex flex-col lg:flex-row justify-between items-start gap-6 transform transition-all duration-500">
                         {/* Carrusel de noticias */}
-                        <div className="w-full lg:w-[905px] shadow-xl hover:shadow-2xl">
+                        <div className="w-full shadow-xl hover:shadow-2xl rounded-xl overflow-hidden">
                             <CarouselPru />
                         </div>
-
-                        {/* Sección de Trámites y Servicios - Rediseñada con iconos originales */}
-                        <section id="tramites-servicios" className="w-full lg:w-2/5 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl p-5 transform transition-all duration-500 hover:shadow-2xl">
-                            <h2 className="font-playfair font-extrabold text-2xl md:text-3xl mb-6 text-center text-gray-900 relative">
-                                Trámites y Servicios
-                                <span className="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#FFB81A] rounded-full"></span>
-                            </h2>
-
-                            {/* Servicios destacados con iconos originales */}
-                            <div className="space-y-4 mb-6">
-                                {/* Tarjeta Imprimir Boleta */}
-                                <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
-                                    <div className="p-4 flex items-center">
-                                        <div className="mr-4 group-hover:scale-110 transition-all duration-300">
-                                            <div className="image-container">
-                                                <Image
-                                                    src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/vnncweww0rltgxs85f9k.jpg"
-                                                    alt="Imagen impresora ipv original"
-                                                    className="original-image w-12 group-hover:hidden"
-                                                    width={48}
-                                                    height={48}
-                                                />
-                                                <Image
-                                                    src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/wlhh0wgv16ymup71m3xe.jpg"
-                                                    alt="Imagen impresora ipv al hacer hover"
-                                                    className="hover-image w-12 hidden group-hover:block"
-                                                    width={48}
-                                                    height={48}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="font-playfair text-lg font-bold text-gray-900 mb-1">Imprimir Boleta</h3>
-                                            <div className="flex justify-between items-center">
-                                                <Link
-                                                    href="http://119.8.76.209:8080/Boletas/com.boleta.homeipv"
-                                                    className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
-                                                >
-                                                    Imprimir
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                                    </svg>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Tarjeta Inscripción */}
-                                <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
-                                    <div className="p-4 flex items-center">
-                                        <div className="mr-4 group-hover:scale-110 transition-all duration-300">
-                                            <div className="image-container">
-                                                <Image
-                                                    src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/slvuu9ssn5bivlpyhlqb.jpg"
-                                                    alt="Imagen nota ipv original"
-                                                    className="original-image w-12 group-hover:hidden"
-                                                    width={48}
-                                                    height={48}
-                                                />
-                                                <Image
-                                                    src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics pictures/cbcgbzwg2u7y8tm6ujpe.jpg"
-                                                    alt="Imagen nota ipv al hacer hover"
-                                                    className="hover-image w-12 hidden group-hover:block"
-                                                    width={48}
-                                                    height={48}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-1">Inscripción</h3>
-                                            <div className="flex justify-between items-center">
-                                                <Link
-                                                    href="https://ipvtuc.gob.ar/siempre/public"
-                                                    className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
-                                                >
-                                                    Inscribirse
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                                    </svg>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Tarjeta Pagos
-                                <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
-                                    <div className="p-4 flex items-center">
-                                        <div className="mr-4 group-hover:scale-110 transition-all duration-300">
-                                            <div className="image-container">
-                                                <Image
-                                                    src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/slvuu9ssn5bivlpyhlqb.jpg"
-                                                    alt="Imagen nota ipv original"
-                                                    className="original-image w-12 group-hover:hidden"
-                                                    width={48}
-                                                    height={48}
-                                                />
-                                                <Image
-                                                    src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics pictures/cbcgbzwg2u7y8tm6ujpe.jpg"
-                                                    alt="Imagen nota ipv al hacer hover"
-                                                    className="hover-image w-12 hidden group-hover:block"
-                                                    width={48}
-                                                    height={48}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-1">Click de Pagos</h3>
-                                            <div className="flex justify-between items-center">
-                                                <Link
-                                                    href="https://ipvtuc.gob.ar/siempre/public"
-                                                    className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
-                                                >
-                                                    Acceder
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                                    </svg>
-                                                </Link>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div> */}
-                            </div>
-
-                            {/* Enlaces adicionales */}
-                            <div className="flex justify-center gap-3 mt-4">
-                                <Link
-                                    href="/tramites/requisitos"
-                                    className="inline-flex items-center px-3 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                                    </svg>
-                                    Requisitos
-                                </Link>
-                                <Link
-                                    href="/tramites/transferencia"
-                                    className="inline-flex items-center px-3 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                                    </svg>
-                                    Transferencia
-                                </Link>
-                            </div>
-                        </section>
                     </div>
-
                 </section>
 
-                {/* Indicador de scroll animado */}
-                <div className="flex justify-center mb-16">
-                    <ScrollIndicator targetId="tramites-servicios" />
-                </div>
+
+                {/* Sección de Trámites y Servicios - Rediseñada con iconos originales */}
+                <section id="tramites-servicios" className="w-full bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl p-5 transform transition-all duration-500 hover:shadow-2xl mb-24">
+
+
+                    {/* Servicios destacados con iconos originales - Ahora en horizontal */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        {/* Tarjeta Imprimir Boleta */}
+                        <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
+                            <div className="p-4 flex items-center">
+                                <div className="mr-4 group-hover:scale-110 transition-all duration-300">
+                                    <div className="image-container">
+                                        <Image
+                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/vnncweww0rltgxs85f9k.jpg"
+                                            alt="Imagen impresora ipv original"
+                                            className="original-image w-12 group-hover:hidden"
+                                            width={48}
+                                            height={48}
+                                        />
+                                        <Image
+                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/wlhh0wgv16ymup71m3xe.jpg"
+                                            alt="Imagen impresora ipv al hacer hover"
+                                            className="hover-image w-12 hidden group-hover:block"
+                                            width={48}
+                                            height={48}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-playfair text-lg font-bold text-gray-900 mb-1">Imprimir Boleta</h3>
+                                    <div className="flex justify-between items-center">
+                                        <Link
+                                            href="http://119.8.76.209:8080/Boletas/com.boleta.homeipv"
+                                            className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
+                                        >
+                                            Imprimir
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Tarjeta Inscripción */}
+                        <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
+                            <div className="p-4 flex items-center">
+                                <div className="mr-4 group-hover:scale-110 transition-all duration-300">
+                                    <div className="image-container">
+                                        <Image
+                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/slvuu9ssn5bivlpyhlqb.jpg"
+                                            alt="Imagen nota ipv original"
+                                            className="original-image w-12 group-hover:hidden"
+                                            width={48}
+                                            height={48}
+                                        />
+                                        <Image
+                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics pictures/cbcgbzwg2u7y8tm6ujpe.jpg"
+                                            alt="Imagen nota ipv al hacer hover"
+                                            className="hover-image w-12 hidden group-hover:block"
+                                            width={48}
+                                            height={48}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Inscripción</h3>
+                                    <div className="flex justify-between items-center">
+                                        <Link
+                                            href="https://ipvtuc.gob.ar/siempre/public"
+                                            className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
+                                        >
+                                            Inscribirse
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Tarjeta Link de pago */}
+                        <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-l-4 border-[#FFB81A] group">
+                            <div className="p-4 flex items-center">
+                                <div className="mr-4 group-hover:scale-110 transition-all duration-300">
+                                    <div className="image-container">
+                                        <Image
+                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/slvuu9ssn5bivlpyhlqb.jpg"
+                                            alt="Imagen nota ipv original"
+                                            className="original-image w-12 group-hover:hidden"
+                                            width={48}
+                                            height={48}
+                                        />
+                                        <Image
+                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics pictures/cbcgbzwg2u7y8tm6ujpe.jpg"
+                                            alt="Imagen nota ipv al hacer hover"
+                                            className="hover-image w-12 hidden group-hover:block"
+                                            width={48}
+                                            height={48}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-1">Link de pago</h3>
+                                    <div className="flex justify-between items-center">
+                                        <Link
+                                            href="https://ipvtuc.gob.ar/siempre/public"
+                                            className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
+                                        >
+                                            Ir al enlace
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Enlaces adicionales - Mantenidos en vertical */}
+                    <div className="space-y-1 md:space-y-0 md:flex justify-around mt-6">
+                        <Link
+                            href="/tramites/requisitos"
+                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            Requisitos
+                        </Link>
+                        <Link
+                            href="/tramites/transferencia"
+                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                            </svg>
+                            Transferencia
+                        </Link>
+                        <Link
+                            href="https://www.boletinoficial.gob.ar/"
+                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            Boletin oficial
+                        </Link>
+                        <Link
+                            href="https://guiadetramites.tucuman.gob.ar/tematica/950/vivienda.html"
+                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            Guia de tramites
+                        </Link>
+                    </div>
+                </section>
                 {/* Sección de Obras */}
                 <section className="mb-24">
                     <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-10 text-gray-900 relative inline-block">

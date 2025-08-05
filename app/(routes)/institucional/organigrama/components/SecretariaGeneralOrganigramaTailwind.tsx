@@ -1,43 +1,40 @@
 import React from 'react';
 import { OrganigramaItem, secretariaGeneralItems } from './SecretariaGeneralData';
 
-// Extender el objeto window para incluir nuestra función de registro
 declare global {
   interface Window {
     registerSecretariaGeneralBoxRef?: (id: string, ref: HTMLDivElement | null) => void;
   }
 }
 
-// Componente para un elemento del organigrama (caja)
+// Componente para un elemento del organigrama (caja) con mejoras visuales
 const OrganigramaBox: React.FC<{
   item: OrganigramaItem;
 }> = ({ item }) => {
-  // Referencia para el elemento DOM
   const boxRef = React.useRef<HTMLDivElement>(null);
 
-  // Registrar la referencia para las conexiones
   React.useEffect(() => {
     if (boxRef.current && item.id && window.registerSecretariaGeneralBoxRef) {
       window.registerSecretariaGeneralBoxRef(item.id, boxRef.current);
     }
   }, [item.id]);
 
-  // Determinar la clase CSS basada en el tipo de elemento
+  // Determinar la clase CSS según el tipo de caja
   const getBoxClass = () => {
-    const baseClass = 'border-2 border-black rounded-md p-2 text-center flex flex-col justify-center items-center h-full';
+    const baseClass = 'border-2 border-gray-700 rounded-lg p-3 text-center flex flex-col justify-center items-center h-full shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-lg';
 
-    // Aplicar colores según el tipo de caja
-    if (item.boxClass === 'area-box') {
-      return `${baseClass} bg-[#FFDC4A]`; // Amarillo para áreas (manteniendo el color según el cuadro de referencias)
-    } else if (item.boxClass === 'subdir-box') {
-      return `${baseClass} bg-[#E0E0E0]`; // Gris claro para subdirecciones
-    } else if (item.boxClass === 'dept-box') {
-      return `${baseClass} bg-[#F5F5F5]`; // Gris blanquecino para departamentos
-    } else if (item.boxClass === 'section-box') {
-      return `${baseClass} bg-[#E0F7FA]`; // Azul muy claro para secciones
+    switch (item.boxClass) {
+      case 'area-box':
+        return `${baseClass} bg-gradient-to-br from-yellow-400 to-yellow-500`;
+      case 'subdir-box':
+        return `${baseClass} bg-gradient-to-br from-gray-200 to-gray-300`;
+      case 'dept-box':
+        return `${baseClass} bg-gradient-to-br from-white to-gray-100`;
+      case 'section-box':
+        return `${baseClass} bg-gradient-to-br from-cyan-50 to-cyan-100`;
+      default:
+        return `${baseClass} bg-white`;
     }
-
-    return `${baseClass} bg-white`;
   };
 
   return (
@@ -49,15 +46,14 @@ const OrganigramaBox: React.FC<{
         height: '100%',
       }}
     >
-      <div className="font-semibold">{item.title}</div>
-      {item.name && <div className="text-sm mt-1">{item.name}</div>}
+      <div className="font-bold text-gray-800">{item.title}</div>
+      {item.name && <div className="text-sm mt-1 text-gray-600">{item.name}</div>}
     </div>
   );
 };
 
-// Componente principal del organigrama
+// Componente principal del organigrama con mejoras responsive
 const SecretariaGeneralOrganigramaTailwind: React.FC = () => {
-  // Filtrar elementos por categorías
   const getItemsByIds = (ids: string[]) => {
     return secretariaGeneralItems.filter(item => ids.includes(item.id)).map(item => ({
       ...item,
@@ -69,64 +65,62 @@ const SecretariaGeneralOrganigramaTailwind: React.FC = () => {
     }));
   };
 
-  // Elementos del área principal
   const headerItems = getItemsByIds(['area']);
-
-  // Elementos de los departamentos
   const departmentItems = getItemsByIds(['dept1', 'dept2']);
 
-  // Agrupar secciones por departamento
   const deptSections = {
     dept1: getItemsByIds(['sec1']),
     dept2: getItemsByIds(['sec2'])
   };
 
+
   return (
-    <div className="organigrama-container relative w-full p-4">
+    <div className="organigrama-container relative w-full p-4 max-w-4xl mx-auto">
+
+
       {/* Área */}
-      <div className="header-section flex flex-col items-center space-y-6 mb-10">
+      <div className="header-section flex flex-col items-center space-y-4 md:space-y-6 mb-6 md:mb-10">
         {headerItems.map(item => (
-          <div key={item.id} className="w-full max-w-md h-20">
+          <div key={item.id} className="w-full max-w-lg h-20 md:h-24">
             <OrganigramaBox item={item} />
           </div>
         ))}
       </div>
 
-      {/* Departamentos */}
-      <div className="departments-section flex justify-center space-x-4 mb-10">
+      {/* Departamentos - Layout responsivo */}
+      <div className="departments-section grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-10">
         {departmentItems.map(item => (
-          <div key={item.id} className="w-full max-w-xs h-24">
+          <div key={item.id} className="h-24">
             <OrganigramaBox item={item} />
           </div>
         ))}
       </div>
 
-      {/* Secciones agrupadas por departamento */}
-      <div className="sections-container flex justify-center space-x-4">
-        <div className="dept1-sections w-full max-w-xs flex flex-col space-y-4">
-          {deptSections.dept1.length > 0 && (
-            <div className="flex justify-center space-x-2">
-              {deptSections.dept1.map(item => (
-                <div key={item.id} className="w-full h-26">
-                  <OrganigramaBox item={item} />
-                </div>
-              ))}
-            </div>
-          )}
+      {/* Secciones agrupadas por departamento - Layout responsivo */}
+      <div className="sections-container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {/* Departamento 1 - Secretaría General */}
+        <div className="dept-section">
+          <div className="flex justify-center">
+            {deptSections.dept1.map(item => (
+              <div key={item.id} className="w-full max-w-md h-24">
+                <OrganigramaBox item={item} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="dept2-sections w-full max-w-xs flex flex-col space-y-4">
-          {deptSections.dept2.length > 0 && (
-            <div className="flex justify-center space-x-2">
-              {deptSections.dept2.map(item => (
-                <div key={item.id} className="w-full h-16">
-                  <OrganigramaBox item={item} />
-                </div>
-              ))}
-            </div>
-          )}
+        {/* Departamento 2 - Comunicación y Prensa */}
+        <div className="dept-section">
+          <div className="flex justify-center">
+            {deptSections.dept2.map(item => (
+              <div key={item.id} className="w-full max-w-md h-24">
+                <OrganigramaBox item={item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
     </div>
   );
 };
