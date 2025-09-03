@@ -166,7 +166,7 @@ Estas porciones del parque fueron pensadas como paseo y a su vez la Norte conten
         fecha: "2024",
         detalles: []
     },
-    
+
 ];
 
 
@@ -360,11 +360,30 @@ export const MainPage = () => {
                     </div>
                 </section>
                 {/* Sección de Obras */}
+
                 <section className="mb-16 sm:mb-20 md:mb-24 px-2 sm:px-4 md:px-6 lg:px-0">
                     <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-gray-900 relative inline-block">
                         Obras
                         <span className="absolute bottom-[-6px] sm:bottom-[-8px] md:bottom-[-10px] left-0 w-1/3 sm:w-1/2 h-0.5 sm:h-1 bg-[#FFB81A] rounded-full"></span>
                     </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">5,000+</div>
+                            <div className="text-black">Viviendas entregadas</div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">3,200+</div>
+                            <div className="text-black">Viviendas en construcción</div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">15+</div>
+                            <div className="text-black">Proyectos activos</div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">20,000+</div>
+                            <div className="text-black">Beneficiarios</div>
+                        </div>
+                    </div>
                     {showFullImage && (
                         <div
                             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-2 sm:p-4"
@@ -400,6 +419,202 @@ export const MainPage = () => {
 
                                     {/* Categorías de obras */}
                                     <Accordion type="single" collapsible className="w-full mb-6">
+                                        <AccordionItem value="reactivacion">
+                                            <AccordionTrigger className="text-left font-medium text-lg">
+                                                <div className="flex items-center">
+                                                    <span className="inline-block w-3 h-3 rounded-full mr-3 bg-yellow-500"></span>
+                                                    <span>Gestión 2025</span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent>
+                                                <div className="p-2 sm:p-4 text-gray-700">
+                                                    <div className="space-y-6">
+                                                        {/* FONAVI RECONSTRUIR */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">FONAVI RECONSTRUIR</h4>
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">100 Las Talitas</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">109 Manantial Sur - GECOMPE + CODESA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">54 Manantial Sur</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">2500 Manantial Sur - Mateo Construcciones</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">85%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-gray-800 text-white rounded">
+                                                                        <span className="font-medium">87 Manantial Sur - Panamericana</span>
+                                                                        <span className="bg-gray-600 text-white px-2 py-1 rounded text-sm">-</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* FONAVI CASA PROPIA */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">FONAVI CASA PROPIA</h4>
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">80 Burruyacu</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">60%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">132 Río Seco</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">56%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">35 La Cocha</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">40%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">76 Los Villagra</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">43%</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">135 San Miguel de Tucumán</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">28%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">182 Bella vista</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">6%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">24 Monteros</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">4%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">32 San miguel de Tucumán</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">1%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">54 García Fernández</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">31 Soldado Maldonado</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* PROMAT CON FONAVI */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">PROMAT CON FONAVI</h4>
+                                                            <div className="space-y-2">
+                                                                <div className="flex justify-between items-center p-2 bg-blue-200 rounded">
+                                                                    <span className="font-medium">109 Soluciones habitacionales distribuidas en 49 comunas y 3 municipios</span>
+                                                                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-sm">En ejecución</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">137 Soluciones habitacionales distribuidas en 5 comunas y 4 municipios</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* VIVIENDAS RURALES */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">VIVIENDAS RURALES MINISTERIO DEL INTERIOR/IPV</h4>
+                                                            <p className="text-center font-semibold mb-3">142 VIVIENDAS RURALES</p>
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS TAPIA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">24 VIVIENDAS AMAICHA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS LOS PUESTOS</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">35% a reiniciar</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS COLALAO</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">36% a reiniciar</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">21 VIVIENDAS GASTONA</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">37% a reiniciar</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS AGUA DULCE</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">34% a reiniciar</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">17 VIVIENDAS TACO RALO</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">35% a reiniciar</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* PROCREAR TUCUMÁN */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">PROCREAR TUCUMÁN con Ministerio de Obras y Servicios Públicos</h4>
+                                                            <div className="text-center mb-3">
+                                                                <p className="font-semibold">1.686 unidades habitacionales 1.400 lotes con servicios</p>
+                                                                <p className="font-semibold">Primera Etapa: 572 viviendas - 15%</p>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* LOTES CON SERVICIO IPV */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">LOTES CON SERVICIO IPV</h4>
+                                                            <div className="space-y-2">
+                                                                <div className="flex justify-between items-center p-2 bg-yellow-200 rounded">
+                                                                    <span className="font-medium">64 Aguilares</span>
+                                                                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-sm">1%</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">131 Arcadia</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">31 Teniente Berdina</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* REGULARIZACIÓN DOMINIAL */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">REGULARIZACIÓN DOMINIAL</h4>
+                                                            <div className="space-y-2">
+                                                                <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                    <span className="font-medium">ESCRITURAS ENTREGADAS 2025</span>
+                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">895</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                    <span className="font-medium">ESTIMATIVO HASTA DICIEMBRE DEL 2025</span>
+                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">1.400</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </AccordionContent>
+                                        </AccordionItem>
+
                                         <AccordionItem value="barrios">
                                             <AccordionTrigger className="text-left font-medium text-lg">
                                                 <div className="flex items-center">
@@ -598,223 +813,12 @@ export const MainPage = () => {
                                                 </div>
                                             </AccordionContent>
                                         </AccordionItem>
-
-                                        <AccordionItem value="reactivacion">
-                                            <AccordionTrigger className="text-left font-medium text-lg">
-                                                <div className="flex items-center">
-                                                    <span className="inline-block w-3 h-3 rounded-full mr-3 bg-yellow-500"></span>
-                                                    <span>Reactivación de obras de vivienda e infraestructura 2025</span>
-                                                </div>
-                                            </AccordionTrigger>
-                                            <AccordionContent>
-                                                <div className="p-2 sm:p-4 text-gray-700">
-                                                    <div className="flex flex-col sm:flex-row">
-                                                        {/* Columna de inversión total (horizontal en móvil, vertical en desktop) */}
-                                                        <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-center w-full sm:w-1/6 border-b sm:border-b-0 sm:border-r border-gray-300 pb-3 sm:pb-0 sm:pr-2 mb-3 sm:mb-0">
-                                                            <span className="text-gray-600 text-sm whitespace-nowrap">INVERSIÓN TOTAL</span>
-                                                            <span className="text-2xl sm:text-3xl md:text-4xl font-bold sm:mt-2">47.000.000</span>
-                                                            <span className="text-[10px] text-gray-500 text-center">MONTOS EN MILLONES DE PESOS</span>
-                                                        </div>
-                                                        {/* Columna principal de datos */}
-                                                        <div className="flex flex-col w-full sm:w-5/6 sm:pl-2">
-                                                            {/* FONAVI */}
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="flex flex-row sm:flex-col items-center sm:items-start w-full sm:w-1/6 border-b sm:border-b-0 sm:border-r border-gray-300 pb-2 sm:pb-0 sm:pr-2 mb-2 sm:mb-0">
-                                                                        <span className="text-gray-600 text-sm font-medium">RECONSTRUIR</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                            <div className="flex items-center">
-                                                                                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-pink-200 flex justify-center items-center mr-2 text-xs sm:text-sm">100</div>
-                                                                                <span className="text-sm sm:text-base">LAS TALITAS</span>
-                                                                            </div>
-                                                                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-1 sm:mt-0">222</div>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">46</div>
-                                                                            <span className="text-sm sm:text-base">MANANTIAL SUR</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-pink-200 flex justify-center items-center mr-2 text-xs sm:text-sm">29</div>
-                                                                            <span className="text-sm sm:text-base">MANANTIAL SUR</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-pink-200 flex justify-center items-center mr-2 text-xs sm:text-sm">20</div>
-                                                                            <span className="text-sm sm:text-base">MANANTIAL SUR</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-pink-200 flex justify-center items-center mr-2 text-xs sm:text-sm">25</div>
-                                                                            <span className="text-sm sm:text-base">MANANTIAL SUR</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">2</div>
-                                                                            <span className="text-sm sm:text-base">BENJAMÍN ARÁOZ</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            {/* FONAVI - Segunda sección */}
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 sm:border-r sm:border-gray-300 sm:pr-2 invisible">
-                                                                        <span className="text-gray-600 text-sm">FONAVI</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                            <div className="flex items-center">
-                                                                                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">80</div>
-                                                                                <span className="text-sm sm:text-base">BURRUYACÚ</span>
-                                                                            </div>
-                                                                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-1 sm:mt-0">505</div>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">132</div>
-                                                                            <span className="text-sm sm:text-base">RÍO SECO</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">35</div>
-                                                                            <span className="text-sm sm:text-base">LA COCHA</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">76</div>
-                                                                            <span className="text-sm sm:text-base">LOS VILLAGRA</span>
-                                                                        </div>
-                                                                        <div className="flex items-center mb-2">
-                                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">182</div>
-                                                                            <span className="text-sm sm:text-base">BELLA VISTA</span>
-                                                                            <span className="ml-2 text-[10px] sm:text-xs text-gray-500">PROYECTA PREB</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            {/* FONDUA */}
-                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                    <div className="flex flex-row sm:flex-col items-center sm:items-start w-full sm:w-1/6 border-b sm:border-b-0 sm:border-r border-gray-300 pb-2 sm:pb-0 sm:pr-2 mb-2 sm:mb-0">
-                                                        <span className="text-gray-600 text-sm font-medium">CASA PROPIA</span>
-                                                    </div>
-                                                    <div className="flex flex-col w-full sm:w-5/6 sm:pl-2">
-                                                        <div className="flex items-center mb-2">
-                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">178</div>
-                                                            <span className="text-sm sm:text-base">SIMOCA</span>
-                                                        </div>
-                                                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                            <div className="flex items-center">
-                                                                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-200 flex justify-center items-center mr-2 text-xs sm:text-sm">54</div>
-                                                                <span className="text-sm sm:text-base">GARCÍA FERNANDEZ</span>
-                                                            </div>
-                                                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mt-1 sm:mt-0">454</div>
-                                                        </div>
-                                                        <div className="flex items-center mb-2">
-                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">32</div>
-                                                            <span className="text-sm sm:text-base">SAN MIGUEL DE TUCUMÁN</span>
-                                                        </div>
-                                                        <div className="flex items-center mb-2">
-                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-200 flex justify-center items-center mr-2 text-xs sm:text-sm">31</div>
-                                                            <span className="text-sm sm:text-base">SOLDADO MALDONADO</span>
-                                                        </div>
-                                                        <div className="flex items-center mb-2">
-                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-yellow-200 flex justify-center items-center mr-2 text-xs sm:text-sm">135</div>
-                                                            <span className="text-sm sm:text-base">SAN MIGUEL DE TUCUMÁN</span>
-                                                        </div>
-                                                        <div className="flex items-center mb-2">
-                                                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-200 flex justify-center items-center mr-2 text-xs sm:text-sm">24</div>
-                                                            <span className="text-sm sm:text-base">MONTEROS</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                                            {/* Secciones adicionales */}
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 invisible">
-                                                                        <span className="text-gray-600 text-sm">ESPACIO</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex-1 text-sm sm:text-base mb-1 sm:mb-0">PROMAT CON FONAVI</div>
-                                                                        <div className="text-3xl sm:text-4xl md:text-5xl font-bold">383</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 invisible">
-                                                                        <span className="text-gray-600 text-sm">ESPACIO</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex-1 text-sm sm:text-base mb-1 sm:mb-0">RURALES FONDOS MINISTERIO DE INTERIOR</div>
-                                                                        <div className="text-3xl sm:text-4xl md:text-5xl font-bold">142</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 invisible">
-                                                                        <span className="text-gray-600 text-sm">ESPACIO</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex-1 text-sm sm:text-base mb-1 sm:mb-0">IPVDU EN EJECUCIÓN AGOSTO 2025</div>
-                                                                        <div className="flex flex-col sm:flex-row sm:items-center">
-                                                                            <span className="text-xs sm:text-sm mr-0 sm:mr-2 mb-1 sm:mb-0">SUBTOTAL</span>
-                                                                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold">1706</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 invisible">
-                                                                        <span className="text-gray-600 text-sm">ESPACIO</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex-1 text-sm sm:text-base mb-1 sm:mb-0">PROCREAR</div>
-                                                                        <div className="text-3xl sm:text-4xl md:text-5xl font-bold">3056</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="border-b border-gray-300 mb-4 pb-2">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 invisible">
-                                                                        <span className="text-gray-600 text-sm">ESPACIO</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex-1 text-sm sm:text-base font-medium mb-1 sm:mb-0">TOTAL VIVIENDAS</div>
-                                                                        <div className="text-3xl sm:text-4xl md:text-5xl font-bold">4762</div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="mb-4">
-                                                                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                                    <div className="hidden sm:flex sm:flex-col sm:items-start sm:w-1/6 invisible">
-                                                                        <span className="text-gray-600 text-sm">ESPACIO</span>
-                                                                    </div>
-                                                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full sm:w-5/6 sm:pl-2">
-                                                                        <div className="flex-1 text-sm sm:text-base mb-1 sm:mb-0">IPVDU</div>
-                                                                        <div className="flex flex-col items-end">
-                                                                            <div className="text-3xl sm:text-4xl md:text-5xl font-bold">4970</div>
-                                                                            <div className="text-xs text-gray-500">SOLUCIONES HABITACIONALES</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </AccordionContent>
-                                        </AccordionItem>
                                     </Accordion>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </section>
                 <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-gray-900 relative inline-block">
                     Enterate primero
