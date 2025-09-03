@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Search } from "lucide-react"; // Importamos el ícono de lupa
-const obrasData = [
+const barrios = [
     {
         id: "obra1",
         titulo: "Lomas de tafi",
@@ -166,38 +166,7 @@ Estas porciones del parque fueron pensadas como paseo y a su vez la Norte conten
         fecha: "2024",
         detalles: []
     },
-    {
-        id: "obra4",
-        titulo: "20 Viv. Manantial Sur",
-        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
-        estado: "En progreso",
-        fecha: "2024",
-        detalles: []
-    },
-    {
-        id: "obra5",
-        titulo: "28 Viv. Manantial Sur",
-        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
-        estado: "En progreso",
-        fecha: "2024",
-        detalles: []
-    },
-    {
-        id: "obra6",
-        titulo: "46 Viv. Manantial Sur",
-        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
-        estado: "En progreso",
-        fecha: "2024",
-        detalles: []
-    },
-    {
-        id: "obra7",
-        titulo: "80 Viv. Manantial Sur",
-        imagen: "https://www.eltucumano.com/fotos/notas/2023/01/16/230116201827_97329.jpg",
-        estado: "En progreso",
-        fecha: "2024",
-        detalles: []
-    },
+
 ];
 
 
@@ -391,17 +360,36 @@ export const MainPage = () => {
                     </div>
                 </section>
                 {/* Sección de Obras */}
-                <section className="mb-24">
-                    <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-10 text-gray-900 relative inline-block">
+
+                <section className="mb-16 sm:mb-20 md:mb-24 px-2 sm:px-4 md:px-6 lg:px-0">
+                    <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-gray-900 relative inline-block">
                         Obras
-                        <span className="absolute bottom-[-10px] left-0 w-1/2 h-1 bg-[#FFB81A] rounded-full"></span>
+                        <span className="absolute bottom-[-6px] sm:bottom-[-8px] md:bottom-[-10px] left-0 w-1/3 sm:w-1/2 h-0.5 sm:h-1 bg-[#FFB81A] rounded-full"></span>
                     </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">5,000+</div>
+                            <div className="text-black">Viviendas entregadas</div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">3,200+</div>
+                            <div className="text-black">Viviendas en construcción</div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">15+</div>
+                            <div className="text-black">Proyectos activos</div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-4xl font-bold text-[#e29911] mb-2">20,000+</div>
+                            <div className="text-black">Beneficiarios</div>
+                        </div>
+                    </div>
                     {showFullImage && (
                         <div
-                            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+                            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-2 sm:p-4"
                             onClick={() => setShowFullImage(false)}
                         >
-                            <div className="relative w-full max-w-6xl h-auto">
+                            <div className="relative w-full max-w-xl sm:max-w-3xl md:max-w-4xl lg:max-w-6xl h-auto">
                                 <Image
                                     src={selectedImage || ""}
                                     alt="Imagen ampliada"
@@ -409,9 +397,10 @@ export const MainPage = () => {
                                     height={800}
                                     className="w-full h-auto"
                                     style={{ objectFit: "contain" }}
+                                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 70vw"
                                 />
                                 <button
-                                    className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
+                                    className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white bg-black/50 rounded-full p-1.5 sm:p-2 hover:bg-black/70 text-sm sm:text-base"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         setShowFullImage(false);
@@ -423,87 +412,413 @@ export const MainPage = () => {
                         </div>
                     )}
                     <div className="rounded-xl overflow-hidden shadow-lg">
-                        <div className="bg-[#FFB81A] py-10">
-                            <div className="">
-                                <div className="bg-white rounded-lg shadow-md p-6">
-                                    <h3 className="text-xl font-semibold mb-6 text-center">Barrios, proyectos y obras en Desarrollo</h3>
+                        <div className="bg-[#FFB81A] py-6 sm:py-8 md:py-10">
+                            <div className="px-2 sm:px-4 md:px-6">
+                                <div className="bg-white rounded-lg shadow-md p-3 sm:p-4 md:p-6">
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">Barrios, proyectos y obras en Desarrollo</h3>
 
-                                    <Accordion type="single" collapsible className="w-full">
-                                        {obrasData.map((obra) => (
-                                            <AccordionItem key={obra.id} value={obra.id}>
-                                                <AccordionTrigger
-                                                    onClick={() => setSelectedObra(selectedObra === obra.id ? null : obra.id)}
-                                                    className="text-left font-medium"
-                                                >
-                                                    <div className="flex items-center">
-                                                        <span className={`inline-block w-3 h-3 rounded-full mr-3 ${obra.estado === "Completado" ? "bg-green-500" :
-                                                            obra.estado === "En progreso" ? "bg-yellow-500" : "bg-blue-500"
-                                                            }`}></span>
-                                                        <span>{obra.titulo}</span>
-                                                        <span className="ml-3 text-sm text-gray-500">({obra.fecha})</span>
-                                                    </div>
-                                                </AccordionTrigger>
-                                                <AccordionContent>
-                                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                                                        <div
-                                                            className="relative h-[200px] rounded-md overflow-hidden group cursor-pointer"
-                                                            onClick={() => handleImageClick(obra.imagen)}
-                                                        >
-                                                            <Image
-                                                                src={obra.imagen}
-                                                                alt={obra.titulo}
-                                                                fill
-                                                                style={{ objectFit: "cover" }}
-                                                            />
-                                                            {/* Overlay con lupa en hover para imágenes del acordeón */}
-                                                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                                                <div className="bg-white/20 p-3 rounded-full backdrop-blur-sm">
-                                                                    <Search className="w-6 h-6 text-white" />
+                                    {/* Categorías de obras */}
+                                    <Accordion type="single" collapsible className="w-full mb-6">
+                                        <AccordionItem value="reactivacion">
+                                            <AccordionTrigger className="text-left font-medium text-lg">
+                                                <div className="flex items-center">
+                                                    <span className="inline-block w-3 h-3 rounded-full mr-3 bg-yellow-500"></span>
+                                                    <span>Gestión 2025</span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent>
+                                                <div className="p-2 sm:p-4 text-gray-700">
+                                                    <div className="space-y-6">
+                                                        {/* FONAVI RECONSTRUIR */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">FONAVI RECONSTRUIR</h4>
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">100 Las Talitas</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">109 Manantial Sur - GECOMPE + CODESA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">54 Manantial Sur</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">2500 Manantial Sur - Mateo Construcciones</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">85%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-gray-800 text-white rounded">
+                                                                        <span className="font-medium">87 Manantial Sur - Panamericana</span>
+                                                                        <span className="bg-gray-600 text-white px-2 py-1 rounded text-sm">-</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className="md:col-span-2">
-                                                            <h4 className="font-semibold mb-2">{obra.titulo}</h4>
-                                                            <p className="text-gray-700 mb-3">{obra.descripcion}</p>
-                                                            <div className="flex items-center mb-4">
-                                                                <span className="font-medium mr-2">Estado:</span>
-                                                                <span className={`px-2 py-1 rounded-full text-xs ${obra.estado === "Completado" ? "bg-green-100 text-green-800" :
-                                                                    obra.estado === "En progreso" ? "bg-yellow-100 text-yellow-800" : "bg-blue-100 text-blue-800"
-                                                                    }`}>
-                                                                    {obra.estado}
-                                                                </span>
-                                                            </div>
 
-                                                            {/* Sub-acordeón para detalles de la obra */}
-                                                            {obra.detalles && obra.detalles.length > 0 && (
-                                                                <div className="mt-4 border-t pt-4">
-                                                                    <h5 className="font-semibold mb-3">Información Detallada</h5>
-                                                                    <Accordion type="multiple" className="w-full">
-                                                                        {obra.detalles.map((detalle) => (
-                                                                            <AccordionItem key={detalle.id} value={detalle.id}>
-                                                                                <AccordionTrigger className="text-left text-sm font-medium py-2">
-                                                                                    {detalle.titulo}
-                                                                                </AccordionTrigger>
-                                                                                <AccordionContent>
-                                                                                    <div className="text-sm text-gray-700 whitespace-pre-line p-2 bg-gray-50 rounded-md">
-                                                                                        {detalle.contenido}
-                                                                                    </div>
-                                                                                </AccordionContent>
-                                                                            </AccordionItem>
-                                                                        ))}
-                                                                    </Accordion>
+                                                        {/* FONAVI CASA PROPIA */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">FONAVI CASA PROPIA</h4>
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">80 Burruyacu</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">60%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">132 Río Seco</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">56%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">35 La Cocha</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">40%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">76 Los Villagra</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">43%</span>
+                                                                    </div>
                                                                 </div>
-                                                            )}
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">135 San Miguel de Tucumán</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">28%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">182 Bella vista</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">6%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">24 Monteros</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">4%</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">32 San miguel de Tucumán</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">1%</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">54 García Fernández</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">31 Soldado Maldonado</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* PROMAT CON FONAVI */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">PROMAT CON FONAVI</h4>
+                                                            <div className="space-y-2">
+                                                                <div className="flex justify-between items-center p-2 bg-blue-200 rounded">
+                                                                    <span className="font-medium">109 Soluciones habitacionales distribuidas en 49 comunas y 3 municipios</span>
+                                                                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-sm">En ejecución</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">137 Soluciones habitacionales distribuidas en 5 comunas y 4 municipios</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* VIVIENDAS RURALES */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">VIVIENDAS RURALES MINISTERIO DEL INTERIOR/IPV</h4>
+                                                            <p className="text-center font-semibold mb-3">142 VIVIENDAS RURALES</p>
+                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS TAPIA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium">24 VIVIENDAS AMAICHA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS LOS PUESTOS</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">35% a reiniciar</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS COLALAO</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">36% a reiniciar</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">21 VIVIENDAS GASTONA</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">37% a reiniciar</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">20 VIVIENDAS AGUA DULCE</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">34% a reiniciar</span>
+                                                                    </div>
+                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium">17 VIVIENDAS TACO RALO</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">35% a reiniciar</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* PROCREAR TUCUMÁN */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">PROCREAR TUCUMÁN con Ministerio de Obras y Servicios Públicos</h4>
+                                                            <div className="text-center mb-3">
+                                                                <p className="font-semibold">1.686 unidades habitacionales 1.400 lotes con servicios</p>
+                                                                <p className="font-semibold">Primera Etapa: 572 viviendas - 15%</p>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* LOTES CON SERVICIO IPV */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">LOTES CON SERVICIO IPV</h4>
+                                                            <div className="space-y-2">
+                                                                <div className="flex justify-between items-center p-2 bg-yellow-200 rounded">
+                                                                    <span className="font-medium">64 Aguilares</span>
+                                                                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-sm">1%</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">131 Arcadia</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium">31 Teniente Berdina</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* REGULARIZACIÓN DOMINIAL */}
+                                                        <div className="bg-gray-50 p-4 rounded-lg">
+                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">REGULARIZACIÓN DOMINIAL</h4>
+                                                            <div className="space-y-2">
+                                                                <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                    <span className="font-medium">ESCRITURAS ENTREGADAS 2025</span>
+                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">895</span>
+                                                                </div>
+                                                                <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                    <span className="font-medium">ESTIMATIVO HASTA DICIEMBRE DEL 2025</span>
+                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">1.400</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </AccordionContent>
-                                            </AccordionItem>
-                                        ))}
+                                                </div>
+                                            </AccordionContent>
+                                        </AccordionItem>
+
+                                        <AccordionItem value="barrios">
+                                            <AccordionTrigger className="text-left font-medium text-lg">
+                                                <div className="flex items-center">
+                                                    <span className="inline-block w-3 h-3 rounded-full mr-3 bg-green-500"></span>
+                                                    <span>Barrios</span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent>
+                                                <Accordion type="single" collapsible className="w-full pl-4 mt-2">
+                                                    {barrios.map((obra) => (
+                                                        <AccordionItem key={obra.id} value={obra.id}>
+                                                            <AccordionTrigger
+                                                                onClick={() => setSelectedObra(selectedObra === obra.id ? null : obra.id)}
+                                                                className="text-left font-medium"
+                                                            >
+                                                                <div className="flex items-center">
+                                                                    <span className={`inline-block w-3 h-3 rounded-full mr-3 ${obra.estado === "Completado" ? "bg-green-500" :
+                                                                        obra.estado === "En progreso" ? "bg-yellow-500" : "bg-blue-500"
+                                                                        }`}></span>
+                                                                    <span>{obra.titulo}</span>
+                                                                    <span className="ml-3 text-sm text-gray-500">({obra.fecha})</span>
+                                                                </div>
+                                                            </AccordionTrigger>
+                                                            <AccordionContent>
+                                                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 pt-2">
+                                                                    <div
+                                                                        className="relative h-[150px] sm:h-[180px] md:h-[200px] rounded-md overflow-hidden group cursor-pointer"
+                                                                        onClick={() => handleImageClick(obra.imagen)}
+                                                                    >
+                                                                        <Image
+                                                                            src={obra.imagen}
+                                                                            alt={obra.titulo}
+                                                                            fill
+                                                                            style={{ objectFit: "cover" }}
+                                                                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                                                                        />
+                                                                        {/* Overlay con lupa en hover para imágenes del acordeón */}
+                                                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                                            <div className="bg-white/20 p-2 sm:p-3 rounded-full backdrop-blur-sm">
+                                                                                <Search className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="sm:col-span-1 md:col-span-2">
+                                                                        <h4 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">{obra.titulo}</h4>
+                                                                        <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">{obra.descripcion}</p>
+                                                                        <div className="flex items-center mb-3 sm:mb-4">
+                                                                            <span className="font-medium text-sm sm:text-base mr-2">Estado:</span>
+                                                                            <span className={`px-2 py-1 rounded-full text-xs ${obra.estado === "Completado" ? "bg-green-100 text-green-800" :
+                                                                                obra.estado === "En progreso" ? "bg-yellow-100 text-yellow-800" : "bg-blue-100 text-blue-800"
+                                                                                }`}>
+                                                                                {obra.estado}
+                                                                            </span>
+                                                                        </div>
+
+                                                                        {/* Sub-acordeón para detalles de la obra */}
+                                                                        {obra.detalles && obra.detalles.length > 0 && (
+                                                                            <div className="mt-3 sm:mt-4 border-t pt-3 sm:pt-4">
+                                                                                <h5 className="font-semibold text-sm sm:text-base mb-2 sm:mb-3">Información Detallada</h5>
+                                                                                <Accordion type="multiple" className="w-full">
+                                                                                    {obra.detalles.map((detalle) => (
+                                                                                        <AccordionItem key={detalle.id} value={detalle.id}>
+                                                                                            <AccordionTrigger className="text-left text-xs sm:text-sm font-medium py-1.5 sm:py-2">
+                                                                                                {detalle.titulo}
+                                                                                            </AccordionTrigger>
+                                                                                            <AccordionContent>
+                                                                                                <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line p-1.5 sm:p-2 bg-gray-50 rounded-md">
+                                                                                                    {detalle.contenido}
+                                                                                                </div>
+                                                                                            </AccordionContent>
+                                                                                        </AccordionItem>
+                                                                                    ))}
+                                                                                </Accordion>
+                                                                            </div>
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+                                                            </AccordionContent>
+                                                        </AccordionItem>
+                                                    ))}
+                                                </Accordion>
+                                            </AccordionContent>
+                                        </AccordionItem>
+
+                                        <AccordionItem value="programas">
+                                            <AccordionTrigger className="text-left font-medium text-base sm:text-lg">
+                                                <div className="flex items-center">
+                                                    <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 rounded-full mr-2 sm:mr-3 bg-blue-500"></span>
+                                                    <span>Programas</span>
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent>
+                                                <div className="p-2 sm:p-4 text-gray-700">
+                                                    <ul className="space-y-3 sm:space-y-4">
+                                                        <li className="border-l-4 border-blue-500 pl-2 sm:pl-3 py-1.5 sm:py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold text-xs sm:text-base">PROGRAMA RECONSTRUIR</h4>
+                                                            <p className="text-xs sm:text-sm">TERMINACION DE 2 VIVIENDAS EN VILLA BENJAMIN ARAOZ - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-1.5 sm:mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
+                                                                    <div className="bg-blue-600 h-2 sm:h-2.5 rounded-full" style={{ width: '42.50%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-xs sm:text-sm font-medium">42.50%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-2 sm:pl-3 py-1.5 sm:py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold text-xs sm:text-base">PROGRAMA CASA PROPIA – CONSTRUIR FUTURO</h4>
+                                                            <p className="text-xs sm:text-sm">80 VIVIENDAS EN BURRUYACU - DEPARTAMENTO BURRUYACU - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-1.5 sm:mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
+                                                                    <div className="bg-blue-600 h-2 sm:h-2.5 rounded-full" style={{ width: '59.387%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-xs sm:text-sm font-medium">59.387%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-2 sm:pl-3 py-1.5 sm:py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold text-xs sm:text-base">PROGRAMA CASA PROPIA – CONSTRUIR FUTURO</h4>
+                                                            <p className="text-xs sm:text-sm">132 VIVIENDAS EN RIO SECO - DEPARTAMENTO MONTEROS - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-1.5 sm:mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
+                                                                    <div className="bg-blue-600 h-2 sm:h-2.5 rounded-full" style={{ width: '55.90%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-xs sm:text-sm font-medium">55.90%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-2 sm:pl-3 py-1.5 sm:py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold text-xs sm:text-base">PROGRAMA CASA PROPIA – CONSTRUIR FUTURO</h4>
+                                                            <p className="text-xs sm:text-sm">35 VIVIENDAS EN LA COCHA - DEPARTAMENTO LA COCHA - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-1.5 sm:mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
+                                                                    <div className="bg-blue-600 h-2 sm:h-2.5 rounded-full" style={{ width: '39.47%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-xs sm:text-sm font-medium">39.47%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-3 py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold">PROGRAMA CASA PROPIA – CONSTRUIR FUTURO</h4>
+                                                            <p>76 VIVIENDAS EN LOS VILLAGRAS - DEPARTAMENTO CRUZ ALTA - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                                                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '43.33%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-sm font-medium">43.33%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-3 py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold">PROGRAMA CASA PROPIA – CONSTRUIR FUTURO</h4>
+                                                            <p>182 VIVIENDAS EN BELLA VISTA - DEPARTAMENTO LEALES - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                                                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '6.31%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-sm font-medium">6.31%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-3 py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold">PROGRAMA CASA PROPIA – CONSTRUIR FUTURO</h4>
+                                                            <p>178 VIVIENDAS EN SIMOCA - DEPARTAMENTO SIMOCA - PROVINCIA DE TUCUMAN</p>
+                                                            <div className="mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                                                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '0.01%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-sm font-medium">0.01% (REINICIO AGOSTO 2025)</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-3 py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold">PROGRAMA PROVINCIAL</h4>
+                                                            <p>24 VIVIENDAS E INFRAESTRUCTURA EN MONTEROS- DPTO. MONTEROS- PCIA. DE TUCUMAN</p>
+                                                            <div className="mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                                                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '4.398%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-sm font-medium">4.398%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-3 py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold">SUBPROGRAMA CASA ACTIVA</h4>
+                                                            <p>CONSTRUCCION DE 32 VIVIENDAS MAS EQUIPAMIENTO EN ESPACIOS COMUNES, CENTRO DE DIA Y PILETA EN SAN MIGUEL DE TUCUMAN</p>
+                                                            <div className="mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                                                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '0.01%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-sm font-medium">0.01% (REINICIO AGOSTO DE 2025)</span>
+                                                            </div>
+                                                        </li>
+                                                        <li className="border-l-4 border-blue-500 pl-3 py-2 bg-blue-50 rounded-r-md">
+                                                            <h4 className="font-bold">PROGRAMA PROVINCIAL</h4>
+                                                            <p>64 LOTES CON SERVICIOS DE INFRAESTRUCTURA EN AGUILARES - DPTO. RIO CHICO - PROV. TUCUMAN</p>
+                                                            <div className="mt-2 flex items-center">
+                                                                <div className="w-full bg-gray-200 rounded-full h-2.5">
+                                                                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '0%' }}></div>
+                                                                </div>
+                                                                <span className="ml-2 text-sm font-medium">INICIO AGOSTO 2025</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </AccordionContent>
+                                        </AccordionItem>
                                     </Accordion>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </section>
                 <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-gray-900 relative inline-block">
                     Enterate primero
