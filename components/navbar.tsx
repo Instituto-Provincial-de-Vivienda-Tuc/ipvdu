@@ -8,7 +8,7 @@ export const Navbar = () => {
     //const router = useRouter()
     return (
         <>
-            <nav className="bg-[#FFE3A7] dark:bg-[#FFE3A7]">
+            <nav className="bg-[#fdb91a]">
                 <div className="max-w-screen-xl px-4 py-2 mx-auto flex justify-end">  <ul className="flex mt-0 space-x-3">
                     <li>
                         <a href="https://www.facebook.com/ipvtucuman">
@@ -31,17 +31,17 @@ export const Navbar = () => {
             <nav className="sticky top-0 z-50 flex items-center justify-between p-3 mx-auto cursor-pointer sm:max-w-4xl md:max-w-screen-xl bg-white shadow-md">
                 <div className="flex">
                     <a href="/" className="flex items-center rtl:space-x-reverse">
-                        <Image 
-                            className="ml-4 md:ml-0 h-8 sm:h-10 md:h-16 w-auto object-contain transition-all duration-300" 
-                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/t8nsoroaqkup8flv9dfp.jpg" 
-                            alt="IPV Logo" 
-                            width={190} 
+                        <Image
+                            className="ml-4 md:ml-0 h-8 sm:h-10 md:h-16 w-auto object-contain transition-all duration-300"
+                            src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1758111322/IPV/logo_IPV_Tuc_color_1_avsuek.png"
+                            alt="IPV Logo"
+                            width={190}
                             height={64}
-                            priority 
+                            priority
                         />
                     </a>
                     <a href="https://www.tucuman.gob.ar/">
-                        <Image className="hidden w-21 h-16 md:block" src="/logo-tucuman-nuevo.svg" alt="Gobierno de Tucumán Logo" width={190} height={64} />
+                        <Image className="hidden w-21 ml-5 h-16 md:block" src="/logo-tucuman-nuevo.svg" alt="Gobierno de Tucumán Logo" width={190} height={64} />
                     </a>
                 </div>
                 <div className="items-center justify-between hidden lg:flex">
