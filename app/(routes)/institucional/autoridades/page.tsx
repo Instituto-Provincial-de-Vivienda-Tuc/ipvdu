@@ -38,8 +38,8 @@ export default function Page() {
                             <div className="p-6 md:p-8 flex items-center justify-center">
                                 <div className="overflow-hidden rounded-xl shadow-md">
                                     <Image
-                                        className="h-64 w-auto object-cover transition-transform duration-500 hover:scale-110"
-                                        src="https://www.reyplast.pe/blog/wp-content/uploads/2016/06/white-background-2.jpg"
+                                        className="h-64 w-64 object-cover transition-transform duration-500 hover:scale-110"
+                                        src="https://www.primerafuente.com.ar/fotos/notas/2023/04/17/720x405_108702_20230417204436.jpg"
                                         alt="Interventor IPV"
                                         width={300}
                                         height={256}
@@ -74,8 +74,8 @@ export default function Page() {
                             <div className="p-6 md:p-8 flex items-center justify-center">
                                 <div className="overflow-hidden rounded-xl shadow-md">
                                     <Image
-                                        className="h-64 w-auto object-cover transition-transform duration-500 hover:scale-110"
-                                        src="https://www.reyplast.pe/blog/wp-content/uploads/2016/06/white-background-2.jpg"
+                                        className="h-64 w-64 object-cover transition-transform duration-500 hover:scale-110"
+                                        src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1748352602/IPV/snqxvlb4jvsh3aoxvwkk.jpg"
                                         alt="Sub Interventora IPV"
                                         width={300}
                                         height={256}

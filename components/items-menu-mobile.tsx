@@ -25,8 +25,6 @@ export const ItemsMenuMobile = () => {
                             <Link href="/institucional/mision" className='block mb-2'>Mision</Link>
                             <hr />
                             <Link href="/institucional/autoridades" className='block mb-2'>Autoridades</Link>
-                            <hr />
-                            <Link href="/institucional/organigrama" className='block mb-2'>Organigrama</Link>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
