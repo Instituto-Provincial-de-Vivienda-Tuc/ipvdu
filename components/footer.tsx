@@ -7,15 +7,21 @@ export const Footer = () => {
             <div className="w-full max-w-screen-xl align-top mx-auto  p-4 md:py-8">
                 <div className="sm:flex sm:justify-between">
                     <div >
-                        <a href="#" className="items-center align-top">
-                            <Image
-                                src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/y3m4bwyjdnmirx4swdre.jpg"
-                                className="hidden md:block h-15"
-                                alt="IPV Logo"
-                                width={450}
-                                height={120}
-                            />
-                        </a>
+                        <div className="flex">
+                            <a href="/" className="flex items-center rtl:space-x-reverse">
+                                <Image
+                                    className="ml-4 md:ml-0 h-8 sm:h-10 md:h-16 w-auto object-contain transition-all duration-300"
+                                    src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1758111322/IPV/logo_IPV_Tuc_color_1_avsuek.png"
+                                    alt="IPV Logo"
+                                    width={190}
+                                    height={64}
+                                    priority
+                                />
+                            </a>
+                            <a href="https://www.tucuman.gob.ar/">
+                                <Image className="hidden w-21  ml-5 h-16 md:block" src="/logo-tucuman-nuevo.svg" alt="Gobierno de Tucumán Logo" width={190} height={64} />
+                            </a>
+                        </div>
                         <p className="mt-5">Idelfonso de las Muñecas 455 – T4000IKI <br />
                             San Miguel de Tucumán – Tucumán – Argentina <br />
                             Telefono +54 381 4212142</p>
@@ -24,9 +30,9 @@ export const Footer = () => {
                         </p>
                     </div>
                     <div >
-                        <a href="https://minobrastuc.gob.ar/" className=" items-center align-top  ">
+                        <a href="https://minobrastuc.gob.ar/" className=" items-center align-top ">
                             <Image
-                                src="https://res.cloudinary.com/djlsm2fwz/image/upload/IPV/statics%20pictures/mjxqnlyyozbilgftecxk.jpg"
+                                src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1758110931/IPV/Ministerio_1Paginas_mtlbte.png"
                                 className="hidden md:block h-15"
                                 alt="Ministerio de Obras Logo"
                                 width={450}

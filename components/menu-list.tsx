@@ -72,9 +72,6 @@ export const MenuList = () => {
                             <ListItem href="/institucional/autoridades" title="Autoridades">
                                 Quienes componen la cabeza del instituto.
                             </ListItem>
-                            <ListItem href="/institucional/organigrama" title="Organigrama">
-                                Asi nos organizamos.
-                            </ListItem>
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>

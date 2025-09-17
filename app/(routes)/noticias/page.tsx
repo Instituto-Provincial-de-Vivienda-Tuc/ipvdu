@@ -8,10 +8,10 @@ export default function Page() {
     return (
 
         <>
-            <Image 
-                className="w-full mx-auto" 
-                src="https://ipvtuc.gob.ar/web/wp-content/uploads/2024/02/pagina-WEB-noticias.png" 
-                alt="Imagen de encabezado de noticias IPV" 
+            <Image
+                className="w-full mx-auto"
+                src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1758110185/IPV/Dise%C3%B1o_sin_t%C3%ADtulo_4_reqqbn.png"
+                alt="Imagen de encabezado de noticias IPV"
                 width={1920}
                 height={600}
             />
