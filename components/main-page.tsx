@@ -195,25 +195,6 @@ export const MainPage = () => {
                         Obras
                         <span className="absolute bottom-[-6px] sm:bottom-[-8px] md:bottom-[-10px] left-0 w-1/3 sm:w-1/2 h-0.5 sm:h-1 bg-[#FFB81A] rounded-full"></span>
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="text-4xl font-bold text-[#e29911] mb-2">5,000+</div>
-                            <div className="text-black">Viviendas entregadas</div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="text-4xl font-bold text-[#e29911] mb-2">3,200+</div>
-                            <div className="text-black">Viviendas en construcción</div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="text-4xl font-bold text-[#e29911] mb-2">15+</div>
-                            <div className="text-black">Proyectos activos</div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div className="text-4xl font-bold text-[#e29911] mb-2">20,000+</div>
-                            <div className="text-black">Beneficiarios</div>
-                        </div>
-                    </div>
-
                     <div className="rounded-xl overflow-hidden shadow-lg">
                         <div className="bg-[#FFB81A] py-6 sm:py-8 md:py-10">
                             <div className="px-2 sm:px-4 md:px-6">
