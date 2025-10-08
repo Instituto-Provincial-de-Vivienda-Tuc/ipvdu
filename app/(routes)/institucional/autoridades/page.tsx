@@ -56,15 +56,12 @@ export default function Page() {
                                 <div className="flex items-center mb-6">
                                     <div className="w-2 h-16 bg-[#FFB81A] mr-4 rounded-full"></div>
                                     <div>
-                                        <h3 className="text-4xl font-medium mb-1 text-gray-900">Eloy Del Pino</h3>
+                                        <h3 className="text-4xl font-medium mb-1 text-gray-900">Sr. Eloy Del Pino</h3>
                                         <h3 className="text-3xl font-bold mb-1 text-[#FFB81A]">Sub Interventor</h3>
                                     </div>
                                 </div>
                                 <div className="ml-6 space-y-4">
-                                    <div>
-                                        <p className="font-medium text-xl text-[#FFB81A]">Profesión</p>
-                                        <p className="font-medium text-lg text-gray-700">Abogado - Universidad Nacional de Tucumán</p>
-                                    </div>
+
                                     <div>
                                         <p className="font-medium text-xl text-[#FFB81A]">Cargo</p>
                                         <p className="font-medium text-lg text-gray-700">Sub Interventor del Instituto Provincial de Vivienda y Desarrollo Urbano de la Provincia de Tucumán</p>
@@ -76,7 +73,7 @@ export default function Page() {
                                     <Image
                                         className="h-64 w-64 object-cover transition-transform duration-500 hover:scale-110"
                                         src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1748352602/IPV/snqxvlb4jvsh3aoxvwkk.jpg"
-                                        alt="Sub Interventora IPV"
+                                        alt="Sub Interventor IPV"
                                         width={300}
                                         height={256}
                                     />
