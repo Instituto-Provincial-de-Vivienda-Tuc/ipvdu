@@ -134,7 +134,7 @@ export const MainPage = () => {
                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Link de pago</h3>
                                     <div className="flex justify-between items-center">
                                         <Link
-                                            href="https://ipvtuc.gob.ar/siempre/public"
+                                            href="https://pagos.macroclickpago.com.ar/SearchDeuda/796153"
                                             className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
                                         >
                                             Ir al enlace
