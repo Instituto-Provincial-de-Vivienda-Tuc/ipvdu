@@ -58,7 +58,7 @@ export const MainPage = () => {
                                     <h3 className="font-playfair text-lg font-bold text-gray-900 mb-1">Imprimir Boleta</h3>
                                     <div className="flex justify-between items-center">
                                         <Link
-                                            href="http://119.8.76.209:8080/Boletas/com.boleta.homeipv"
+                                            href="https://cuotas.ipvtuc.gob.ar/"
                                             className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
                                         >
                                             Imprimir
@@ -96,7 +96,7 @@ export const MainPage = () => {
                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Inscripción</h3>
                                     <div className="flex justify-between items-center">
                                         <Link
-                                            href="https://ipvtuc.gob.ar/siempre/public"
+                                            href="https://inscripciones.ipvtuc.gob.ar/"
                                             className="inline-flex items-center px-3 py-1 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63] text-sm"
                                         >
                                             Inscribirse

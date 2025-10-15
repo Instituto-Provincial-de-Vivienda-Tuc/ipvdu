@@ -83,14 +83,14 @@ export const MenuList = () => {
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <Link href="http://119.8.76.209:8080/Boletas/com.boleta.homeipv" legacyBehavior passHref>
+                    <Link href="https://cuotas.ipvtuc.gob.ar/" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Boleta
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <Link href="https://ipvtuc.gob.ar/siempre/public" legacyBehavior passHref>
+                    <Link href="https://inscripciones.ipvtuc.gob.ar/" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Inscripcion
                         </NavigationMenuLink>
