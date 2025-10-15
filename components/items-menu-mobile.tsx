@@ -41,9 +41,9 @@ export const ItemsMenuMobile = () => {
                             <hr />
                             <Link href="https://guiadetramites.tucuman.gob.ar/tematica/950/vivienda.html" className='block mb-2'>Guia de tramites</Link>
                             <hr />
-                            <Link href="https://ipvtuc.gob.ar/siempre/public" className='block mb-2'>Inscripcion</Link>
+                            <Link href="https://inscripciones.ipvtuc.gob.ar/" className='block mb-2'>Inscripcion</Link>
                             <hr />
-                            <Link href="http://119.8.76.209:8080/Boletas/com.boleta.homeipv" className='block mb-2'>Boleta</Link>
+                            <Link href="https://cuotas.ipvtuc.gob.ar/" className='block mb-2'>Boleta</Link>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
