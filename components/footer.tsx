@@ -33,7 +33,7 @@ export const Footer = () => {
                             <p>Idelfonso de las Muñecas 455 – T4000IKI <br />
                                 San Miguel de Tucumán – Tucumán – Argentina <br />
                                 Telefono +54 381 4212142</p>
-                            <p className="mt-3">Horario de Atención 8:00h. a 13:00h.</p>
+                            <p className="mt-3">Horario de Atención 7:00h. a 14:00h.</p>
                         </div>
                     </div>
 
