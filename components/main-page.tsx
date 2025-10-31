@@ -224,22 +224,24 @@ export const MainPage = () => {
                                                                 <div className="space-y-2">
                                                                     <div className="flex justify-between items-center p-2 bg-green-200 rounded">
                                                                         <span className="font-medium">100 Las Talitas</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
+
                                                                     </div>
                                                                     <h6 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">2500 Manantial Sur</h6>
                                                                     <div className="flex justify-between items-center p-2 bg-green-200 rounded">
                                                                         <span className="font-medium">109 Manantial Sur - GECOMPE + CODESA</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-green-200 rounded">
                                                                         <span className="font-medium">54 Manantial Sur - Mateo Construcciones</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
+                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
                                                                         <span className="font-medium">87 Manantial Sur - Panamericana</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">85%</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
+
                                                                     </div>
 
                                                                 </div>
@@ -253,48 +255,48 @@ export const MainPage = () => {
                                                                 <div className="space-y-2">
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">80 Burruyacu</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">60%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">68%</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">132 Río Seco</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">56%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">66%</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">35 La Cocha</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">40%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">49%</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">76 Los Villagra</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">43%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">52%</span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="space-y-2">
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">135 San Miguel de Tucumán</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">28%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">29%</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">182 Bella vista</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">6%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">104 viv. al 12%</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">24 Monteros</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">4%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">21,5%</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">32 San miguel de Tucumán</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">1%</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">2%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                                                                 <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
                                                                     <span className="font-medium">54 García Fernández</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
                                                                 </div>
                                                                 <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
                                                                     <span className="font-medium">31 Soldado Maldonado</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -322,11 +324,11 @@ export const MainPage = () => {
                                                                 <div className="space-y-2">
                                                                     <div className="flex justify-between items-center p-2 bg-green-200 rounded">
                                                                         <span className="font-medium">20 VIVIENDAS TAPIA</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-green-200 rounded">
                                                                         <span className="font-medium">24 VIVIENDAS AMAICHA</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminada</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas</span>
                                                                     </div>
                                                                     <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
                                                                         <span className="font-medium">20 VIVIENDAS LOS PUESTOS</span>
@@ -359,15 +361,15 @@ export const MainPage = () => {
                                                             <div className="space-y-2">
                                                                 <div className="flex justify-between items-center p-2 bg-yellow-200 rounded">
                                                                     <span className="font-medium">64 Aguilares</span>
-                                                                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-sm">1%</span>
+                                                                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-sm">15,5%</span>
                                                                 </div>
                                                                 <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
                                                                     <span className="font-medium">131 Arcadia</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
                                                                 </div>
                                                                 <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
                                                                     <span className="font-medium">31 Teniente Berdina</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
                                                                 </div>
                                                             </div>
                                                         </div>
