@@ -196,195 +196,220 @@ export const MainPage = () => {
                         <span className="absolute bottom-[-6px] sm:bottom-[-8px] md:bottom-[-10px] left-0 w-1/3 sm:w-1/2 h-0.5 sm:h-1 bg-[#FFB81A] rounded-full"></span>
                     </h2>
                     <div className="rounded-xl overflow-hidden shadow-lg">
-                        <div className="bg-[#FFB81A] py-6 sm:py-8 md:py-10">
+                        <div className="bg-[#FFB81A] py-4 sm:py-6 md:py-8 lg:py-10">
                             <div className="px-2 sm:px-4 md:px-6">
                                 <div className="bg-white rounded-lg shadow-md p-3 sm:p-4 md:p-6">
                                     <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">Barrios, proyectos y obras en Desarrollo</h3>
 
                                     {/* Categorías de obras */}
-                                    <div className="w-full mb-6">
+                                    <div className="w-full mb-4 sm:mb-6">
                                         <div>
-
                                             <div>
-                                                <div className="p-2 sm:p-4 text-gray-700">
-                                                    <div className="space-y-6">
+                                                <div className="p-2 sm:p-3 md:p-4 text-gray-700">
+                                                    <div className="space-y-4 sm:space-y-6">
                                                         {/* PROCREAR TUCUMÁN */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">PROCREAR TUCUMÁN con Ministerio de Obras y Servicios Públicos</h4>
-                                                            <div className="text-center mb-3">
-                                                                <p className="font-semibold">1.656 unidades habitacionales 1.400 lotes con servicios</p>
-                                                                <p className="font-semibold">Primera Etapa: 572 viviendas - 15%</p>
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">PROCREAR TUCUMÁN con Ministerio de Obras y Servicios Públicos</h4>
+                                                            <div className="text-center mb-2 sm:mb-3">
+                                                                <p className="font-semibold text-sm sm:text-base">1.656 unidades habitacionales 1.400 lotes con servicios</p>
+                                                                <p className="font-semibold text-sm sm:text-base">Primera Etapa: 572 viviendas - 15%</p>
                                                             </div>
                                                         </div>
 
                                                         {/* FONAVI RECONSTRUIR */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">FONAVI RECONSTRUIR</h4>
-                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">FONAVI RECONSTRUIR</h4>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
-                                                                        <span className="font-medium">100 Las Talitas</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
-
-                                                                    </div>
-                                                                    <h6 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">2500 Manantial Sur</h6>
-                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
-                                                                        <span className="font-medium">109 Manantial Sur - GECOMPE + CODESA</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
-                                                                    </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
-                                                                        <span className="font-medium">54 Manantial Sur - Mateo Construcciones</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">100 Las Talitas</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas y entregadas</span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
-                                                                        <span className="font-medium">87 Manantial Sur - Panamericana</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
-
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">2 Viviendas en Benjamin Aráoz</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas y entregadas</span>
                                                                     </div>
-
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        {/* FONAVI CASA PROPIA */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">FONAVI CASA PROPIA</h4>
-                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">2500 Manantial Sur</h4>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">80 Burruyacu</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">68%</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">109 Manantial Sur - GECOMPE + CODESA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas y entregadas</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">132 Río Seco</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">66%</span>
-                                                                    </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">35 La Cocha</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">49%</span>
-                                                                    </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">76 Los Villagra</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">52%</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">54 Manantial Sur - Mateo Construcciones</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas y entregadas</span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">135 San Miguel de Tucumán</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">29%</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">87 Manantial Sur - Panamericana</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas y entregadas</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">182 Bella vista</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">104 viv. al 12%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {/* FONAVI CASA PROPIA */}
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">FONAVI CASA PROPIA</h4>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
+                                                                <div className="space-y-2">
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">80 Burruyacu</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">68%</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">24 Monteros</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">21,5%</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">132 Río Seco</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">66%</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">32 San miguel de Tucumán</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">2%</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">35 La Cocha</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">49%</span>
+                                                                    </div>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">76 Los Villagra</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">52%</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="space-y-2">
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">135 San Miguel de Tucumán</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">29%</span>
+                                                                    </div>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">178 Simoca</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">57 Viv. al 4 %</span>
+                                                                    </div>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">182 Bella vista</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">104 viv. al 12%</span>
+                                                                    </div>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">24 Monteros</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">21,5%</span>
+                                                                    </div>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">32 San miguel de Tucumán</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">2%</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
-                                                                    <span className="font-medium">54 García Fernández</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">54 García Fernández</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Reinicio noviembre 2025</span>
                                                                 </div>
-                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
-                                                                    <span className="font-medium">31 Soldado Maldonado</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">31 Soldado Maldonado</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Reinicio noviembre 2025</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         {/* PROMAT CON FONAVI */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">PROMAT CON FONAVI</h4>
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">PROMAT CON FONAVI</h4>
                                                             <div className="space-y-2">
-                                                                <div className="flex justify-between items-center p-2 bg-blue-200 rounded">
-                                                                    <span className="font-medium">309 Soluciones habitacionales distribuidas en 49 comunas y 3 municipios</span>
-                                                                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-sm">En ejecución</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-blue-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">309 Soluciones habitacionales distribuidas en 49 comunas y 3 municipios</span>
+                                                                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">En ejecución</span>
                                                                 </div>
-                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
-                                                                    <span className="font-medium">137 Soluciones habitacionales distribuidas en 5 comunas y 4 municipios</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">A comenzar próximamente</span>
+                                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                                                                    <div className="space-y-2">
+                                                                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                            <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">31 Soluciones Habitacionales  con Provision de Materiales</span>
+                                                                            <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="space-y-2">
+                                                                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                            <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0">278 Soluciones Habitacionales  en Ejecucion</span>
+                                                                            <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Avance promedio 40%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">137 Soluciones habitacionales distribuidas en 5 comunas y 4 municipios</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Inicio Noviembre 2025</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         {/* VIVIENDAS RURALES */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">VIVIENDAS RURALES MINISTERIO DEL INTERIOR/IPV</h4>
-                                                            <p className="text-center font-semibold mb-3">142 VIVIENDAS RURALES</p>
-                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">VIVIENDAS RURALES MINISTERIO DEL INTERIOR/IPV</h4>
+                                                            <p className="text-center font-semibold text-sm sm:text-base mb-2 sm:mb-3">142 VIVIENDAS RURALES</p>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
-                                                                        <span className="font-medium">20 VIVIENDAS TAPIA</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas y entregadas</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">20 VIVIENDAS TAPIA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas y entregadas</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-green-200 rounded">
-                                                                        <span className="font-medium">24 VIVIENDAS AMAICHA</span>
-                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-sm">Terminadas</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-green-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">24 VIVIENDAS AMAICHA</span>
+                                                                        <span className="bg-green-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Terminadas</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">20 VIVIENDAS LOS PUESTOS</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">95% a reiniciar</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">20 VIVIENDAS LOS PUESTOS</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">95% a reiniciar</span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="space-y-2">
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">20 VIVIENDAS COLALAO</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">96% a reiniciar</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">20 VIVIENDAS COLALAO</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">96% a reiniciar</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">21 VIVIENDAS GASTONA</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">97% a reiniciar</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">21 VIVIENDAS GASTONA</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">97% a reiniciar</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">20 VIVIENDAS AGUA DULCE</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">94% a reiniciar</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">20 VIVIENDAS AGUA DULCE</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">94% a reiniciar</span>
                                                                     </div>
-                                                                    <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                        <span className="font-medium">17 VIVIENDAS TACO RALO</span>
-                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">83% a reiniciar</span>
+                                                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                        <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">17 VIVIENDAS TACO RALO</span>
+                                                                        <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">83% a reiniciar</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         {/* LOTES CON SERVICIO IPV */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">LOTES CON SERVICIO IPV</h4>
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">LOTES CON SERVICIO IPV</h4>
                                                             <div className="space-y-2">
-                                                                <div className="flex justify-between items-center p-2 bg-yellow-200 rounded">
-                                                                    <span className="font-medium">64 Aguilares</span>
-                                                                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-sm">15,5%</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-yellow-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">64 Aguilares</span>
+                                                                    <span className="bg-yellow-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">15,5%</span>
                                                                 </div>
-                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
-                                                                    <span className="font-medium">131 Arcadia</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">131 Arcadia</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Reinicio noviembre 2025</span>
                                                                 </div>
-                                                                <div className="flex justify-between items-center p-2 bg-purple-200 rounded">
-                                                                    <span className="font-medium">31 Teniente Berdina</span>
-                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm">Reinicio noviembre 2025</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-purple-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">31 Teniente Berdina</span>
+                                                                    <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">Reinicio noviembre 2025</span>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         {/* REGULARIZACIÓN DOMINIAL */}
-                                                        <div className="bg-gray-50 p-4 rounded-lg">
-                                                            <h4 className="font-bold text-lg mb-3 text-center bg-blue-600 text-white py-2 rounded">REGULARIZACIÓN DOMINIAL</h4>
+                                                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                                            <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-center bg-blue-600 text-white py-1.5 sm:py-2 rounded">REGULARIZACIÓN DOMINIAL</h4>
                                                             <div className="space-y-2">
-                                                                <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                    <span className="font-medium">ESCRITURAS ENTREGADAS 2025</span>
-                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">899</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">ESCRITURAS ENTREGADAS 2025</span>
+                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">899</span>
                                                                 </div>
-                                                                <div className="flex justify-between items-center p-2 bg-orange-200 rounded">
-                                                                    <span className="font-medium">ESTIMATIVO HASTA DICIEMBRE DEL 2025</span>
-                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-sm">1.400</span>
+                                                                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-2 bg-orange-200 rounded">
+                                                                    <span className="font-medium text-sm sm:text-base mb-1 sm:mb-0 w-full sm:w-auto text-left">ESTIMATIVO HASTA DICIEMBRE DEL 2025</span>
+                                                                    <span className="bg-orange-500 text-white px-2 py-1 rounded text-xs sm:text-sm w-full sm:w-auto text-center sm:text-left">1.400</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -410,7 +435,7 @@ export const MainPage = () => {
                         <iframe
                             className="absolute top-0 left-0 w-full h-full"
                             src="https://www.youtube.com/embed/Ehk9g0mKZWI"
-                            title="Activarán las obras en Manantial Sur | Entrevista con Hugo Cabral, interventor del IPV"
+                            title="Entrevista con Hugo Cabral, interventor del IPV"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen>
