@@ -7,10 +7,10 @@ export default function Page() {
         <div className="min-h-screen bg-gray-50">
             {/* Banner principal */}
             <div className="relative w-full overflow-hidden">
-                <Image 
-                    className="w-full mx-auto" 
-                    src="https://ipvtuc.gob.ar/web/wp-content/uploads/2024/02/pagina-WEB-foto-encabezado-institucional-1024x397.png" 
-                    alt="Imagen encabezado IPV Tucumán" 
+                <Image
+                    className="w-full mx-auto"
+                    src="https://ipvtuc.gob.ar/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdncvxpgj1%2Fimage%2Fupload%2Fv1758110185%2FIPV%2FDise%25C3%25B1o_sin_t%25C3%25ADtulo_4_reqqbn.png&w=1920&q=75"
+                    alt="Imagen encabezado IPV Tucumán"
                     width={1024}
                     height={397}
                     priority
@@ -45,7 +45,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Matrimonio legalmente constituido con o sin hijos.</span>
                         </li>
-                        
+
                         {/* Requisito 2 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -57,7 +57,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Unión de hecho necesariamente con descendencia y debida acreditación de la misma.</span>
                         </li>
-                        
+
                         {/* Requisito 3 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -69,7 +69,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Titular solo/a con descendencia o a cargo de menores, acreditado con guarda legal.</span>
                         </li>
-                        
+
                         {/* Requisito 4 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -81,7 +81,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Titular mayor de edad con hermanos huérfanos y/o discapacitados con tenencia, tutoría o curatela.</span>
                         </li>
-                        
+
                         {/* Requisito 5 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -93,7 +93,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Constancia de convivencia emitida por el Registro del Estado y Capacidad de las Personas, al momento de la inscripción.</span>
                         </li>
-                        
+
                         {/* Requisito 6 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -105,7 +105,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Titular soltero con padres a cargo debidamente acreditado.</span>
                         </li>
-                        
+
                         {/* Requisito 7 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -117,7 +117,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">Titular divorciado con hijos a cargo.</span>
                         </li>
-                        
+
                         {/* Requisito 8 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -135,7 +135,7 @@ export default function Page() {
                                 </ul>
                             </div>
                         </li>
-                        
+
                         {/* Requisito 9 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -147,7 +147,7 @@ export default function Page() {
                             </div>
                             <span className="text-lg text-gray-700 pt-1 group-hover:text-gray-900 transition-colors duration-300">La postulación será válida para proyectos que se ejecuten en la localidad de inscripción y alrededores.</span>
                         </li>
-                        
+
                         {/* Requisito 10 */}
                         <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                             <div className="flex-shrink-0 w-8 h-8 bg-[#FFB81A]/10 rounded-full flex items-center justify-center group-hover:bg-[#FFB81A]/20 transition-all duration-300">
@@ -168,11 +168,11 @@ export default function Page() {
                         </li>
                     </ul>
                 </div>
-                
+
                 {/* Botón de volver */}
                 <div className="flex justify-center mt-8">
-                    <a 
-                        href="/" 
+                    <a
+                        href="/"
                         className="inline-flex items-center px-8 py-3 bg-[#FFB81A] text-gray-900 font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-lg hover:bg-[#ffce63]"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">

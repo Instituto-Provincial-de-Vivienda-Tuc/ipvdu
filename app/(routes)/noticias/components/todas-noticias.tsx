@@ -17,13 +17,13 @@ export const ListaNoticias = () => {
                 return (
                     <div className="overflow-hidden mb-5" key={slug}>
                         <div className="md:flex md:flex-row-reverse">
-                            <div className="max-w-xs md:h-28 h-auto ml-9 mb-5 md:mb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <div className="w-full md:w-80 h-48 md:h-32 ml-9 mb-5 md:mb-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-shrink-0">
                                 <Image
-                                    className="rounded-t-lg"
+                                    className="rounded-t-lg w-full h-full object-cover"
                                     src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${result !== null && !loading && (imagenPrincipal.url)}`}
                                     alt={`Imagen de noticia: ${titulo}`}
-                                    width={400}
-                                    height={224}
+                                    width={320}
+                                    height={180}
                                 />
                             </div>
                             <div className=" max-w-xs md:max-w-5xl md:p-4 ml-9 md:ml-0">
