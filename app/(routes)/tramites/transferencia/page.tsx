@@ -16,7 +16,7 @@ export default function Page() {
             <div className="relative w-full overflow-hidden">
                 <Image
                     className="w-full mx-auto"
-                    src="https://ipvtuc.gob.ar/web/wp-content/uploads/2024/02/pagina-WEB-foto-encabezado-institucional-1024x397.png"
+                    src="https://ipvtuc.gob.ar/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdncvxpgj1%2Fimage%2Fupload%2Fv1758110185%2FIPV%2FDise%25C3%25B1o_sin_t%25C3%25ADtulo_4_reqqbn.png&w=1920&q=75"
                     alt="Imagen encabezado IPV Tucumán"
                     width={1024}
                     height={397}
