@@ -115,14 +115,14 @@ export const MainPage = () => {
                                 <div className="mr-4 group-hover:scale-110 transition-all duration-300">
                                     <div className="image-container">
                                         <Image
-                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics%20pictures/slvuu9ssn5bivlpyhlqb.jpg"
+                                            src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1765370743/Dise%C3%B1o_sin_t%C3%ADtulo_1_gyjpc9.png"
                                             alt="Imagen nota ipv original"
                                             className="original-image w-12 group-hover:hidden"
                                             width={48}
                                             height={48}
                                         />
                                         <Image
-                                            src="https://res.cloudinary.com/djlsm2fwz/image/upload/f_webp/IPV/statics pictures/cbcgbzwg2u7y8tm6ujpe.jpg"
+                                            src="https://res.cloudinary.com/dncvxpgj1/image/upload/v1765371160/Dise%C3%B1o_sin_t%C3%ADtulo_2_rnnkai.png"
                                             alt="Imagen nota ipv al hacer hover"
                                             className="hover-image w-12 hidden group-hover:block"
                                             width={48}
