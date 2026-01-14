@@ -22,6 +22,11 @@ export function CarouselPru() {
         Autoplay({ delay: 5000, stopOnInteraction: true })
     );
 
+    // Ordenar por fecha de publicación (más recientes primero)
+    const sortedResult = result
+        ? [...result].sort((a: NoticiaType, b: NoticiaType) => new Date(b.fecha).getTime() - new Date(a.fecha).getTime())
+        : null;
+
     return (
         <div className="relative w-full">
             <Carousel
@@ -36,8 +41,8 @@ export function CarouselPru() {
                     {loading && (
                         <SkeletonSchema grid={3} />
                     )}
-                    {result != null && (
-                        result.map((noticia: NoticiaType) => {
+                    {sortedResult != null && (
+                        sortedResult.map((noticia: NoticiaType) => {
                             const { id, titulo, subtitulo, fecha, slug, imagenPrincipal, category } = noticia
                             return (
                                 <CarouselItem key={id} className="md:basis-full">
