@@ -98,14 +98,18 @@ export const OfficialAnnouncements = () => {
                                                 />
                                             </div>
 
-                                            <div className="relative w-full h-full p-4 md:p-8 z-10">
+                                            <div
+                                                className="relative w-full h-full p-4 md:p-8 z-10 cursor-pointer group"
+                                                onClick={() => setSelectedImage(announcement.src)}
+                                            >
                                                 <Image
                                                     src={announcement.src}
                                                     alt={announcement.alt}
                                                     fill
-                                                    className="object-contain p-2 md:p-4 transition-transform duration-500 hover:scale-[1.02]"
+                                                    className="object-contain p-2 md:p-4 transition-transform duration-500 group-hover:scale-[1.03]"
                                                     priority
                                                 />
+                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 pointer-events-none rounded-[2rem]"></div>
                                             </div>
 
                                             {/* Badge flotante sobre la imagen en mobile */}
@@ -217,7 +221,6 @@ export const OfficialAnnouncements = () => {
 
                         <motion.div
                             className="relative w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
-                            onClick={(e) => e.stopPropagation()}
                         >
                             <motion.div
                                 drag={zoom > 1}
@@ -225,6 +228,7 @@ export const OfficialAnnouncements = () => {
                                 animate={{ scale: zoom }}
                                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                                 className="relative w-full h-full max-w-5xl max-h-[90vh]"
+                                onClick={(e) => e.stopPropagation()}
                             >
                                 <Image
                                     src={selectedImage}
@@ -237,7 +241,7 @@ export const OfficialAnnouncements = () => {
                             </motion.div>
                         </motion.div>
 
-                        <p className="absolute bottom-10 text-white/50 text-xs text-center pointer-events-none uppercase tracking-widest">
+                        <p className="absolute bottom-10 text-white/50 text-xs text-center pointer-events-none uppercase tracking-widest z-[110]">
                             {zoom > 1 ? 'Puedes arrastrar la imagen para moverte' : 'Usa los controles de arriba para hacer zoom'}
                         </p>
                     </motion.div>
