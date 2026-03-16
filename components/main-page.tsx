@@ -3,6 +3,7 @@
 import React from 'react'
 
 import { CarouselPru } from './carousel-pru'
+import { OfficialAnnouncements } from './official-announcements'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -188,6 +189,9 @@ export const MainPage = () => {
                         </Link>
                     </div>
                 </section>
+
+                <OfficialAnnouncements />
+
                 {/* Sección de Obras */}
 
                 <section className="mb-16 sm:mb-20 md:mb-24 px-2 sm:px-4 md:px-6 lg:px-0">
