@@ -10,12 +10,31 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import { Megaphone, Award, Calendar, X, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react'
+import { Megaphone, Award, Calendar, X, ZoomIn, ZoomOut, RotateCcw, ChevronDown, FileText, Download } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+
+interface Announcement {
+    id: number;
+    src: string;
+    alt: string;
+    date: string;
+    category: string;
+    showPadrones?: boolean;
+}
+
+const padronesData = [
+    { name: 'Padron General', url: '/pdf/Padron General.pdf' },
+    { name: 'Padrón Madre Soltera', url: '/pdf/Padrón Madre Soltera.pdf' },
+    { name: 'Padron Jubilados', url: '/pdf/Padron Jubilados.pdf' },
+    { name: 'Padron Discapacitados', url: '/pdf/Padron Discapacitados.pdf' },
+    { name: 'Padron Policia', url: '/pdf/Padron Policia.pdf' },
+    { name: 'Servicio Penitenciario', url: '/pdf/Servicio Penitenciario.pdf' },
+];
 
 export const OfficialAnnouncements = () => {
     const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
     const [zoom, setZoom] = React.useState(1);
+    const [openPadrones, setOpenPadrones] = React.useState<number | null>(null);
 
     const plugin = React.useRef(
         Autoplay({ delay: 6000, stopOnInteraction: true })
@@ -43,6 +62,14 @@ export const OfficialAnnouncements = () => {
 
     // Lista de comunicados.
     const announcements = [
+        {
+            id: 2,
+            src: '/images/comunicado2.jpg',
+            alt: 'Padrones Provisorios Los Bulacio y Los Villagra',
+            date: '14 de Mayo, 2026',
+            category: 'Padrones',
+            showPadrones: true
+        },
         {
             id: 1,
             src: '/images/comunicado1.png',
@@ -152,6 +179,47 @@ export const OfficialAnnouncements = () => {
                                                 <ZoomIn size={18} />
                                                 Ampliar Imagen
                                             </button>
+
+                                            {(announcement as Announcement).showPadrones && (
+                                                <div className="mt-4">
+                                                    <button
+                                                        onClick={() => setOpenPadrones(openPadrones === announcement.id ? null : announcement.id)}
+                                                        className="bg-[#FFB81A] hover:bg-[#ffce63] text-gray-900 font-bold py-3 px-8 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 w-full md:w-fit"
+                                                    >
+                                                        <FileText size={18} />
+                                                        Ver Padrones
+                                                        <ChevronDown
+                                                            size={18}
+                                                            className={`transition-transform duration-200 ${openPadrones === announcement.id ? 'rotate-180' : ''}`}
+                                                        />
+                                                    </button>
+
+                                                    {openPadrones === announcement.id && (
+                                                        <motion.div
+                                                            initial={{ opacity: 0, height: 0 }}
+                                                            animate={{ opacity: 1, height: 'auto' }}
+                                                            exit={{ opacity: 0, height: 0 }}
+                                                            className="mt-3 bg-slate-50 rounded-xl p-4 border border-slate-200"
+                                                        >
+                                                            <div className="flex flex-col gap-2">
+                                                                {padronesData.map((padron, idx) => (
+                                                                    <a
+                                                                        key={idx}
+                                                                        href={padron.url}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="flex items-center gap-3 text-[#00519E] hover:text-[#003d7a] bg-white px-4 py-3 rounded-lg border border-slate-200 hover:border-[#00519E] transition-all hover:shadow-md truncate"
+                                                                    >
+                                                                        <FileText size={18} className="flex-shrink-0 text-[#FFB81A]" />
+                                                                        <span className="truncate">{padron.name}</span>
+                                                                        <Download size={18} className="flex-shrink-0 ml-auto" />
+                                                                    </a>
+                                                                ))}
+                                                            </div>
+                                                        </motion.div>
+                                                    )}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </CarouselItem>
