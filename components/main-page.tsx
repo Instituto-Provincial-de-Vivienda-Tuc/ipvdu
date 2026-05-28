@@ -149,11 +149,11 @@ export const MainPage = () => {
                         </div>
                     </div>
 
-                    {/* Enlaces adicionales - Mantenidos en vertical */}
-                    <div className="space-y-1 md:space-y-0 md:flex justify-around mt-6">
+                    {/* Enlaces adicionales - responsive grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
                         <Link
                             href="/tramites/requisitos"
-                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                            className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-full"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -162,7 +162,7 @@ export const MainPage = () => {
                         </Link>
                         <Link
                             href="/tramites/transferencia"
-                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                            className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-full"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
@@ -171,7 +171,7 @@ export const MainPage = () => {
                         </Link>
                         <Link
                             href="https://www.boletinoficial.gob.ar/"
-                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                            className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-full"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -180,7 +180,7 @@ export const MainPage = () => {
                         </Link>
                         <Link
                             href="https://guiadetramites.tucuman.gob.ar/tematica/950/vivienda.html"
-                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-64 justify-center"
+                            className="inline-flex items-center justify-center px-4 py-2 bg-white border border-gray-200 text-gray-700 font-medium rounded-full shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:border-[#FFB81A] text-sm w-full"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-[#FFB81A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -436,12 +436,12 @@ export const MainPage = () => {
                     Enterate primero
                     <span className="absolute bottom-[-10px] left-0 w-1/2 h-1 bg-[#FFB81A] rounded-full"></span>
                 </h2>
-                <div className="relative w-full overflow-hidden my-14 rounded-xl shadow-lg">
-                    <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <div className="relative overflow-hidden my-14 rounded-xl shadow-lg max-w-sm mx-auto">
+                    <div className="relative" style={{ paddingBottom: '177.78%' }}>
                         <iframe
                             className="absolute top-0 left-0 w-full h-full"
-                            src="https://www.youtube.com/embed/Ehk9g0mKZWI"
-                            title="Entrevista con Hugo Cabral, interventor del IPV"
+                            src="https://www.youtube.com/embed/caR8xOQNphc"
+                            title="Cobertura de los medios en el IPV - Enterate primero"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen>
