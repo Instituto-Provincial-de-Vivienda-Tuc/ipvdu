@@ -8,8 +8,8 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
+    type CarouselApi,
 } from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
 import { Megaphone, Award, Calendar, X, ZoomIn, ZoomOut, RotateCcw, ChevronDown, FileText, Download } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -23,22 +23,26 @@ interface Announcement {
 }
 
 const padronesData = [
-    { name: 'Padron General', url: '/pdf/Padron General.pdf' },
-    { name: 'Padrón Madre Soltera', url: '/pdf/Padrón Madre Soltera.pdf' },
-    { name: 'Padron Jubilados', url: '/pdf/Padron Jubilados.pdf' },
-    { name: 'Padron Discapacitados', url: '/pdf/Padron Discapacitados.pdf' },
-    { name: 'Padron Policia', url: '/pdf/Padron Policia.pdf' },
-    { name: 'Servicio Penitenciario', url: '/pdf/Servicio Penitenciario.pdf' },
+    { name: 'Padrón General', url: '/pdf/padron general def.pdf' },
+    { name: 'Madre Soltera', url: '/pdf/madre soltera def.pdf' },
+    { name: 'Jubilados y Pensionados', url: '/pdf/jubilados y pens def.pdf' },
+    { name: 'Padrón Policía', url: '/pdf/padron policia def.pdf' },
+    { name: 'Discapacitados', url: '/pdf/discapacitados def.pdf' },
+    { name: 'Servicio Penitenciario', url: '/pdf/serv penit def.pdf' },
 ];
 
 export const OfficialAnnouncements = () => {
     const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
     const [zoom, setZoom] = React.useState(1);
     const [openPadrones, setOpenPadrones] = React.useState<number | null>(null);
+    const [api, setApi] = React.useState<CarouselApi>(undefined);
 
-    const plugin = React.useRef(
-        Autoplay({ delay: 6000, stopOnInteraction: true })
-    );
+    React.useEffect(() => {
+        if (!api) return;
+        const onSelect = () => setOpenPadrones(null);
+        api.on("select", onSelect);
+        return () => { api.off("select", onSelect); };
+    }, [api]);
 
     const handleZoomIn = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -61,11 +65,11 @@ export const OfficialAnnouncements = () => {
     };
 
     // Lista de comunicados.
-    const announcements = [
+    const announcements: Announcement[] = [
         {
             id: 2,
             src: '/images/comunicado2.jpg',
-            alt: 'Padrones Provisorios Los Bulacio y Los Villagra',
+            alt: 'Padrones Definitivos Los Bulacio y Los Villagra',
             date: '14 de Mayo, 2026',
             category: 'Padrones',
             showPadrones: true
@@ -102,16 +106,16 @@ export const OfficialAnnouncements = () => {
 
                 <div className="max-w-4xl mx-auto">
                     <Carousel
-                        plugins={[plugin.current]}
+                        setApi={setApi}
                         className="w-full"
                         opts={{
                             loop: true,
                         }}
                     >
-                        <CarouselContent className="ml-0">
+                        <CarouselContent className="ml-0 items-stretch">
                             {announcements.map((announcement) => (
                                 <CarouselItem key={announcement.id} className="pl-0">
-                                    <div className="bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 flex flex-col md:flex-row h-auto min-h-[500px] md:min-h-[600px] transform transition-all duration-500">
+                                    <div className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 flex flex-col md:flex-row h-full transform transition-all duration-500">
 
                                         {/* Lado de la Imagen (Columna Izquierda en Desktop) */}
                                         <div className="w-full md:w-3/5 relative bg-slate-100 aspect-[3/4] md:aspect-auto flex items-center justify-center overflow-hidden">
@@ -181,7 +185,7 @@ export const OfficialAnnouncements = () => {
                                             </button>
 
                                             {(announcement as Announcement).showPadrones && (
-                                                <div className="mt-4">
+                                                <div className="relative mt-4 z-10">
                                                     <button
                                                         onClick={() => setOpenPadrones(openPadrones === announcement.id ? null : announcement.id)}
                                                         className="bg-[#FFB81A] hover:bg-[#ffce63] text-gray-900 font-bold py-3 px-8 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 w-full md:w-fit"
@@ -196,10 +200,10 @@ export const OfficialAnnouncements = () => {
 
                                                     {openPadrones === announcement.id && (
                                                         <motion.div
-                                                            initial={{ opacity: 0, height: 0 }}
-                                                            animate={{ opacity: 1, height: 'auto' }}
-                                                            exit={{ opacity: 0, height: 0 }}
-                                                            className="mt-3 bg-slate-50 rounded-xl p-4 border border-slate-200"
+                                                            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                                                            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                                                            className="absolute bottom-full left-0 right-0 mb-3 z-20 bg-white rounded-xl p-4 border border-slate-200 shadow-xl origin-bottom"
                                                         >
                                                             <div className="flex flex-col gap-2">
                                                                 {padronesData.map((padron, idx) => (
