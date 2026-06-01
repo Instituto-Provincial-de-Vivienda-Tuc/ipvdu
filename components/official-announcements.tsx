@@ -69,7 +69,7 @@ export const OfficialAnnouncements = () => {
         {
             id: 2,
             src: '/images/comunicado2.jpeg',
-            alt: 'Padrones Definitivos Los Bulacio y Los Villagra.',
+            alt: 'Padrones Definitivos Los Bulacio y Los Villagra',
             date: '14 de Mayo, 2026',
             category: 'Padrones',
             showPadrones: true
