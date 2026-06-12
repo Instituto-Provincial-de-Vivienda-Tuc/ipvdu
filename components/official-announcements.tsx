@@ -19,6 +19,7 @@ interface Announcement {
     alt: string;
     date: string;
     category: string;
+    description?: string;
     showPadrones?: boolean;
 }
 
@@ -66,6 +67,14 @@ export const OfficialAnnouncements = () => {
 
     // Lista de comunicados.
     const announcements: Announcement[] = [
+        {
+            id: 3,
+            src: '/images/comunicado3.jpeg',
+            alt: 'Sorteo 76 Viviendas - Los Villagra y Los Bulacio',
+            date: '12 de Junio, 2026',
+            category: 'Sorteo',
+            description: 'Comunicamos a los inscriptos de la operatoria denominada "76 Viviendas e Infraestructura en Los Villagra y Los Bulacio". El día 23 de junio del corriente año, se llevará a cabo el sorteo de selección de postulantes, ante Escribano Público de Gobierno y demás autoridades. El mismo, se llevará a cabo en el Salón Los Alamos, ubicado en RUTA Provincial N° 306 - Km 20, de esa localidad, a partir de las 9:00 horas. Quedan ustedes debidamente invitados.'
+        },
         {
             id: 2,
             src: '/images/comunicadodos.jpeg',
@@ -173,7 +182,7 @@ export const OfficialAnnouncements = () => {
                                             <div className="h-1 w-20 bg-[#FFB81A] mb-8 rounded-full"></div>
 
                                             <p className="text-slate-600 mb-10 leading-relaxed italic">
-                                                &quot;Invitamos a la población a seguir los canales oficiales para el acceso a información certificada sobre planes de vivienda.&quot;
+                                                {announcement.description ?? `"Invitamos a la población a seguir los canales oficiales para el acceso a información certificada sobre planes de vivienda."`}
                                             </p>
 
                                             <button
